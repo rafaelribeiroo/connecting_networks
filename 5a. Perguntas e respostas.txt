@@ -1,0 +1,42 @@
+Gostaria de saber se tem a possibilidade de usar roteadores diferentes para um roteador e o outro ser o repetidor? Ou os dois têm que ser do mesmo modelo? Desde já agradeço e grande sucesso ao Curso em Vídeo.
+
+Joga o RJ-45 de um router pro outro
+No que vai receber:
+	> Wireless
+		> Wireless Settings
+			Wireless Network Name: Repetidor
+			Channel: 1
+		> Wireless Security
+			Password: <sua_senha>
+	> Network
+		> Wan
+			Dynamic IP
+		> Lan
+			Ip Address: 192.168.1.1
+
+	Se quiser reservar seu router apenas para os MACs
+	> Security
+		> Local Management
+			Only the PCs listed can browse the built-in web pages to perform Administrator tasks
+
+No principal:
+	> Account Management 
+		root
+		pr0!ml$1
+	> WLAN Basic
+		SSID Name: Ribeiro
+		Authentication Mode: WPA2
+	> WLAN Advanced
+		Channel: 1
+		Channel width: 40MHz
+	> LAN
+		> LAN Host
+			Primary IP Address: 192.168.0.1
+	> Security
+		> Parental Control
+			Apply on specified devices
+
+Não precisa ser do mesmo modelo, já que em casa eu tenho um roteador da Huawei e outro da TP-Link, não faz a menor diferença já que ambos trabalham da mesma forma.
+
+Ensina também a ajeitar quando o wifi limita a velocidade, por exemplo, tenho 25mb e pelo wifi chega só 2
+Pode ser interferência, tem um residencial sem fio que tá na mesma frequência. Então é bom analisar a rede e ver em qual canal colocar.
