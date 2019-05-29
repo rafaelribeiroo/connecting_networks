@@ -6,6 +6,7 @@ No que vai receber:
 		> Wireless Settings
 			Wireless Network Name: Repetidor
 			Channel: 1
+			Channel width: 40MHz
 		> Wireless Security
 			Password: <sua_senha>
 	> Network
@@ -21,13 +22,13 @@ No que vai receber:
 
 No principal:
 	> Account Management 
-		root
-		pr0!ml$1
+		<root>
+		<standard_password>
 	> WLAN Basic
 		SSID Name: Ribeiro
 		Authentication Mode: WPA2
 	> WLAN Advanced
-		Channel: 1
+		Channel: 4
 		Channel width: 40MHz
 	> LAN
 		> LAN Host
