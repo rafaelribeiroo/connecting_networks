@@ -1,4 +1,6 @@
-Gostaria de saber se tem a possibilidade de usar roteadores diferentes para um roteador e o outro ser o repetidor? Ou os dois têm que ser do mesmo modelo? Desde já agradeço e grande sucesso ao Curso em Vídeo.
+Gostaria de saber se tem a possibilidade de usar roteadores diferentes para um
+roteador e o outro ser o repetidor? Ou os dois têm que ser do mesmo modelo?
+Desde já agradeço e grande sucesso ao Curso em Vídeo.
 
 Joga o RJ-45 de um router pro outro
 No que vai receber:
@@ -21,7 +23,7 @@ No que vai receber:
 			Only the PCs listed can browse the built-in web pages to perform Administrator tasks
 
 No principal:
-	> Account Management 
+	> Account Management
 		<root>
 		<standard_password>
 	> WLAN Basic
@@ -37,7 +39,11 @@ No principal:
 		> Parental Control
 			Apply on specified devices
 
-Não precisa ser do mesmo modelo, já que em casa eu tenho um roteador da Huawei e outro da TP-Link, não faz a menor diferença já que ambos trabalham da mesma forma.
+Não precisa ser do mesmo modelo, já que em casa eu tenho um roteador da Huawei e
+outro da TP-Link, não faz a menor diferença já que ambos trabalham da mesma
+forma.
 
-Ensina também a ajeitar quando o wifi limita a velocidade, por exemplo, tenho 25mb e pelo wifi chega só 2
-Pode ser interferência, tem um residencial sem fio que tá na mesma frequência. Então é bom analisar a rede e ver em qual canal colocar.
+Ensina também a ajeitar quando o wifi limita a velocidade, por exemplo, tenho
+25mb e pelo wifi chega só 2
+Pode ser interferência, tem um residencial sem fio que tá na mesma frequência.
+Então é bom analisar a rede e ver em qual canal colocar.

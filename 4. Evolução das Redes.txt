@@ -1,7 +1,0 @@
-Em 69, surgiu a comunicação entre redes, onde consistia em compartilhar dados entre quartéis generais. Essa comunicação era feita através de um mainframe e terminais (PC's primordiais). O grande problema é que haviam apenas 4 pontos de acesso comunicáveis. 
-Foi então que surgiu o protocolo, que era nada mais que um conjunto de regras e ações que a rede tem que seguir os equipamentos para que aconteça a transmissão. Se todos não seguir a mesma regra, como vamos saber o que falar e quando falar? Com isso, criaram o idioma único para que todos os pontos conseguissem conversar entre si.
-	Quando surgiram os protocolos, nasceu um nomeado: 'TCP/IP', que consiste em 4 camadas (mais simples que OSI), ele basicamente transmite as informações em bloquinhos e passa uma identificação (vamos supor que quero enviar um alicate, o protocolo TCP/IP vai pegar ele, quebrar tudo em pedacinhos, vai enviar pedacinho por pedacinho pra um endereço que é dado pelo IP). 
-		> Vai separar a informação, enviar por pedaços e no destinatário, o TCP vai desempacotar e entregar.
-
-	Mais tarde, surgiu um protocolo dentro do TCP/IP, nomeado: 'DNS'. O DNS é como um serviço interno, que é tipo uma agenda eletrônica, basicamente vários servidores (13), cuja função existe apenas uma, se o usuário digitar o hostname, ele vai lá buscar o IP para te exibir a página.
-
