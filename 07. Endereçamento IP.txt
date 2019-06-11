@@ -1,9 +1,0 @@
-Endereço IP: Endereço utilizado para identificar os dispositivos na rede, não
-tem como achar alguém se não souber onde ele tá.
-
-Cada cliente é presenteado com apenas um IP para enviar requisições aos
-servidores, porém na maioria das vezes ele é estático. Já os servidores
-tem IP fixo pra ser identificado mais fácil.
-
-Classe IP: Dividir em grupinhos.
-
