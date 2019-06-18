@@ -1,0 +1,37 @@
+Priori: Nunca diga que sabe de tudo! Porque quando pronuncia isso você se
+convence que sabe tanto, que não precisa mais de estudar.
+
+IP's restritos e privados: Não é que não podem ser utilizados, mas são
+específicos pra determinadas situações.
+
+    IP's            Máscara
+    10.0.0.0        /8                  <
+    172.16.0.0      /12                 <   CIDR
+    192.168.0.0     /16                 <
+
+    São adequados e utilizados somente em rede interna, por isso sempre que
+    você compra seu roteador e fica lá atrás "192.168". Esse 192.168 não é
+    porque é padrão da tp-link nem nenhum outro fabricante.
+    > Mas porque é restrito para rede local
+
+127.0.0.0
+    Mais usado na programação, o IP que uso para acessar o servidor,
+    corresponde ao próprio computador (loopback: endereço da própria
+    máquina/dispositivo)
+
+169.254.0.0
+    APIPA do endereço IP quando não acha o roteador na rede. Por exemplo, 169 é
+    IP de erro (quando não acha o DHCP nem ninguém que tá distribuindo IP).
+
+0.0.0.0
+    IP de inicialização, utilizado quando o pc inicia.
+
+Mas para configuração do meu roteador, não posso alterar qualquer um dos
+octetos (192.168.0.0), pois as máscaras nos impedem.
+    A: 255.0.0.0
+    B: 255.255.0.0
+    C: 255.255.255.0
+
+Os "255" representam a rede, e os "0" os hosts, então alteramos apenas os hosts
+para que possamos configurar corretamente.
+
