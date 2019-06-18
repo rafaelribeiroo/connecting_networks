@@ -1,0 +1,22 @@
+A maioria das provedoras de internet oferecem IP dinâmico, buscando do DHCP.
+Mas, como faz para alterarmos para estático?
+
+1. Abra o arquivo /etc/network/interfaces
+# Comenta tudo que estiver descomentado
+
+2. Clicar na engrenagem da configuração de rede e pegar o nome de rede
+auto enp1s0  # Replace enp1s0 para o seu
+
+3. Passe para estático
+iface enp1s0 inet static
+
+4. Sete um endereço IP de rede local e sua máscara
+address 192.168.25.33
+netmask 255.255.255.0
+
+5. Aponte para o seu roteador
+gateway 192.168.1.1
+
+6. Forçando as alterações
+/etc/init.d/networking restart
+init 6
