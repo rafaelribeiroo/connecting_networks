@@ -32,6 +32,7 @@ octetos (192.168.0.0), pois as máscaras nos impedem.
     B: 255.255.0.0
     C: 255.255.255.0
 
-Os "255" representam a rede, e os "0" os hosts, então alteramos apenas os hosts
-para que possamos configurar corretamente.
+Os "255" representam a rede, e os "0" os hosts, podemos colocar qualquer número
+nos hosts que não altera em nada a configuração da nossa rede (muitos confundem
+que precisa ser 127.0.0.1, mas só o 127 importa).
 
