@@ -1,0 +1,30 @@
+Endereço utilizado para identificar os dispositivos na rede.
+    > Cada cliente é "presenteado" com apenas um IP para enviar requisições aos
+    servidores, porém na maioria das vezes ele é estático (altera regularmente)
+    Já os servidores tem IP fixo (dinâmico) pra ser identificado mais fácil.
+
+Um IPv4 (mais popular) possui quatro octetos de números, o computador vê tudo
+como binário (já o IPv6 vê como hexadecimal).
+
+Portas lógicas
+
+    NOT     NAND     NOR     OR     AND
+                                    Os equipamentos usam essa porta para fazer
+                                    cálculo de máscara dispensando informações
+                                    adicionais
+
+
+Todos os IP's fazem parte de alguma classe (divisão em grupinhos)
+A              B              C              D              E
+0 a 127        128 a 191      192 a 223      224 a 239      240 a 255
+
+"Porque até 255"
+Pois é o valor máximo que posso obter com 8bits
+2⁸ = 256
+Mas são 255 combinações já que o 0 conta também
+
+Prefixos
+    > Multicast: Para um grupo seleto de pessoas;
+    > Unicast: Manda mensagem pra um endereço único (como DB);
+    > Broadcast: Transmite pra todos (na mesma rede);
+    > Anycast: Qualquer um mais próximo.
