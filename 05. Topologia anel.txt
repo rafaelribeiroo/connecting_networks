@@ -1,0 +1,25 @@
+Na topologia física ANEL todos os computadores são interligados formando um
+circuito fechado (em forma de anel).
+HOW WORK COMMUNICATION: Se o dispositivo 1 quiser comunicar com o 3, ele tem
+que enviar pro 2 antes, que vai repassar pro 3.
+
+CARACTERÍSTICAS
+→ Ponto-a-ponto: Porque o ENLACE está ligado apenas em 2 dispositivos;
+→ Tipo transmissão: Simples
+    Pois o sinal vai em uma direção apenas.
+→ Aceita os 2 tipos de cabeamento abaixo:
+    ← Par trançado;
+    ← Fibra óptica.
+
+No ANEL, temos as seguintes topologias LÓGICAS:
+    → Token ring (4mbps ↔ 16mbps);
+    Passagem de ficha, quem deter: fala ou passa a vez.
+    → FDDI (100mbps).
+    São 2 anéis: um girando por fora para efetuar a comunicação e outro por
+    dentro para representar a topologia lógica.
+
+ADENDO
+Ao invés de tê-los (pc's) em um circuito fechado, podemos ter um equipamento
+central: "MAU". Sua composição são vários switchs e sua comunicação é feita
+da seguinte forma: se o PC 1 quiser comunicar com o 6, ele vai alternando de
+switch em switch até chegar ao destinatário (em forma de circuito fechado).

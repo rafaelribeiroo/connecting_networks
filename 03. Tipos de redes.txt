@@ -33,23 +33,26 @@ uma MAN.
 
 Antes de explicar a última classificação, vamos aprender umas palavrinhas-chave
 
+Nó → Ponto de comunicação na minha rede (dispositivo conectado/compõe na rede).
+Enlace → Meio físico que é utilizado para ligar os nós.
+Emissor → O que envia a informação.
+Receptor → Ouvinte.
+    São 3 tipos de transmissão, todos têm emissor/receptor mas atuam diferente:
+    ← Simples: Sinal só vai pra um lado. (O que ouve só ouve e vice-versa);
+    ← Half-duplex: Os dois lados podem ser emissor e/ou receptor, só que um de
+    cada vez (Walk Talk);
+    ← Full-duplex: Vai e volta ao mesmo tempo (ligação).
+Ponto-a-ponto (não o mesmo do modelo computacional) → Identificamos se houver
+dois dispositivos ligados (nós) em um switch (ou outro equipamento).
+Multi-ponto: Se houver vários pontos/nós.
 
-Baseado nesses tipos, temos dois tipos de topologia (arranjo de qualquer coisa)
+TOPOLOGIA: Basicamente é a forma física de alguma coisa.
+    Ex: Topologia dos canos de água da sua casa: por onde eles passam...
 
-	Física: Onde eu coloquei os computadores e aonde vou chegar com os
-    equipamentos/cabos.
-		→ Estrela: Ponto central que distribui sinal para outros pontos
-        periféricos.
-		→ Barramento: Uma rua principal (backbone/espinha dorsal) com suas
-		ramificações.
-		→ Anel: Não tenho um ponto central, cada ponto se comunica entre si em
-		forma de um anel.
-
-	Lógica: "Como eles vão trocar os dados?"
-		→ Ethernet: Trabalha com o conceito de colisão. Quando duas pessoas
-        transmitirem ao mesmo tempo, ele não vai deixar. "Cancela os dois,
-        um espera 1s/o outro 2s".
-		→ Token ring: Suponhamos uma sala de aula, onde temos vários estudantes
-        sentados em formato de anel aguardando o professor, que por sua vez
-        começa a falar com um apagador em mãos, quando ele não quiser mais
-        falar, ele passa pro próximo, que poderá optar entre falar ou não.
+    Existe a topologia FÍSICA e a LÓGICA
+    < Em uma analogia de sala de aula... >
+    A FÍSICA seria a organização das fileiras e a LÓGICA a forma que o
+    professor usa para comunicar
+    < Na informática >
+    A FÍSICA seria a localização dos pc's e aonde vou chegar com os
+    equipamentos/cabos, enquanto a LÓGICA seria: "como vão trocar os dados?"
