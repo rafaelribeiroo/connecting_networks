@@ -38,10 +38,11 @@ Enlace → Meio físico que é utilizado para ligar os nós.
 Emissor → O que envia a informação.
 Receptor → Ouvinte.
     São 3 tipos de transmissão, todos têm emissor/receptor mas atuam diferente:
-    ← Simples: Sinal só vai pra um lado. (O que ouve só ouve e vice-versa);
+    ← Simples: Sinal só vai pra um lado. (O que ouve só ouve e vice-versa. →
+    ou ←);
     ← Half-duplex: Os dois lados podem ser emissor e/ou receptor, só que um de
-    cada vez (Walk Talk);
-    ← Full-duplex: Vai e volta ao mesmo tempo (ligação).
+    cada vez (Walk Talk. ⇆);
+    ← Full-duplex: Vai e volta ao mesmo tempo (Ligação. ↔).
 Ponto-a-ponto (não o mesmo do modelo computacional) → Identificamos se houver
 dois dispositivos ligados (nós) em um switch (ou outro equipamento).
 Multi-ponto: Se houver vários pontos/nós.

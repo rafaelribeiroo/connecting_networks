@@ -32,3 +32,26 @@ computador.
 Qual a diferença entre <MAN> e <WAN>?
 Se utilizarmos apenas uma tecnologia (não apenas ethernet, mas ADSL/...), é
 uma MAN.
+
+O que é um cabo blindado?
+A blindagem serve para combater as ondas eletromagnéticas, se trata de um meio
+externo para não afetar como o sinal é transmitido.
+
+Qual a diferença entre <megabit> e <megabyte>?
+→ Mb: taxa de velocidade;
+→ MB: armazenamento.
+
+O que significa a função WDS?
+Permite que um roteador converse com o outro a fim de criar uma rede única.
+
+O que é o DHCP?
+É o cara que distribui configuração de IP automaticamente.
+
+O que é um CLUSTER?
+É um nome dado a um grupo de computadores trabalhando em conjunto ou
+arquitetura de sistema capaz de unir essas máquinas.
+Temos diversos tipos:
+    ← Cluster de alto desempenho: Focado em solucionar problemas que necessitam
+    de muito processamento e entregá-los em um tempo considerável.
+    ← Alta disponibilidade: Focado em manter a aplicação sempre no ar.
+    ← Balanceamento de carga: Dividir as tarefas de forma similar entre nós.
