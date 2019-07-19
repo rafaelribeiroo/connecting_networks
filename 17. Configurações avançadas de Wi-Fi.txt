@@ -1,0 +1,19 @@
+Nas configurações avançadas do nosso roteador, será possível visualizar as
+seguintes especificações:
+
+    > Nome da Rede (SSID) [] Ocultar SSID
+    A opção: "Ocultar SSID" foi detalhada no arquivo: "15. Configurando..."
+
+    > Segurança
+    Dica: Nunca deixe sem segurança ou em: "WEP", pois é facilmente "quebrada"
+
+    > Modo: Temos dois tipos, sendo um com terminologia: "N" e outro: "misto"
+        ← Misto: Pega o roteador e diminui o raio de ação/potência, a fim de
+        deixar a rede compatível com qualquer dispositivo (mais antigo). Pra
+        ser compatível, sempre vai ter uma perca.
+        ← N: Alcança maior.
+
+    > Largura do canal: Não vai mudar muita coisa.
+
+    > Canal: Esse é importante, sempre mantenha em canais opostos em relação a
+    outros dispositivos (LINSSID).

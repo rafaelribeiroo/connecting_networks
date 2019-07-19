@@ -1,49 +1,64 @@
-Gostaria de saber se tem a possibilidade de usar roteadores diferentes para um
-roteador e o outro ser o repetidor? Ou os dois têm que ser do mesmo modelo?
-Desde já agradeço e grande sucesso ao Curso em Vídeo.
+O que é redes de computadores?
+Basicamente, se dá por qualquer dispositivo que você tenha que acessa a
+internet e que seja possível realizar cabeamento (ligar uma coisa na
+outra e realizar troca de informações). Não necessariamente
+precisamos de um dispositivo para ter uma rede, apenas
+cabos (através de um crossover transferimos dados
+entre pc's)
 
-Joga o RJ-45 de um router pro outro
-No que vai receber:
-	> Wireless
-		> Wireless Settings
-			Wireless Network Name: Repetidor
-			Channel: 1
-			Channel width: 40MHz
-		> Wireless Security
-			Password: <sua_senha>
-	> Network
-		> Wan
-			Dynamic IP
-		> Lan
-			Ip Address: 192.168.1.1
+Tenho dois roteadores em casa e ainda assim está muito ruim o sinal, o que pode
+ser?
+Verifique se os dois estão em canais distintos, pode ser que estão na mesma
+frequência, e um acaba atrapalhando o outro.
 
-	Se quiser reservar seu router apenas para os MACs
-	> Security
-		> Local Management
-			Only the PCs listed can browse the built-in web pages to perform Administrator tasks
+O que é o <loopback>?
+Endereço da própria máquina
 
-No principal:
-	> Account Management
-		<root>
-		<standard_password>
-	> WLAN Basic
-		SSID Name: Ribeiro
-		Authentication Mode: WPA2
-	> WLAN Advanced
-		Channel: 4
-		Channel width: 40MHz
-	> LAN
-		> LAN Host
-			Primary IP Address: 192.168.0.1
-	> Security
-		> Parental Control
-			Apply on specified devices
+O que é <downsizing>?
+Antigamente, era apenas um processador centralizado para comandar todo o
+tráfego de redes e informações, até o ponto que se tornou extremamente
+lento, obrigando as redes a evoluir pro DOWNSIZING, que era o fato de
+remover esse computador "grandão" e transformar em vários
+computadores menores, exercendo funções diferentes
+(servidores).
 
-Não precisa ser do mesmo modelo, já que em casa eu tenho um roteador da Huawei e
-outro da TP-Link, não faz a menor diferença já que ambos trabalham da mesma
-forma.
+O que é <gateway>?
+É o cara que representa o roteador que estamos conectado.
 
-Ensina também a ajeitar quando o wifi limita a velocidade, por exemplo, tenho
-25mb e pelo wifi chega só 2
-Pode ser interferência, tem um residencial sem fio que tá na mesma frequência.
-Então é bom analisar a rede e ver em qual canal colocar.
+O que é <ethernet>?
+É a tecnologia da rede local (lan), basicamente serve pro modem falar com o
+computador.
+
+Qual a diferença entre <MAN> e <WAN>?
+Se utilizarmos apenas uma tecnologia (não apenas ethernet, mas ADSL/...), é
+uma MAN.
+
+O que é um cabo blindado?
+A blindagem serve para combater as ondas eletromagnéticas, se trata de um meio
+externo para não afetar como o sinal é transmitido.
+
+Qual a diferença entre <megabit> e <megabyte>?
+→ Mb: taxa de velocidade;
+→ MB: armazenamento.
+
+O que significa a função WDS?
+Permite que um roteador converse com o outro a fim de criar uma rede única.
+
+O que é proxy?
+Você usa ele para agir entre seu "client" e sua conexão de internet, comumente
+chamado de "man in the middle", ele vai servir para você caso queira
+"filtrar" o acesso dos usuários, bloqueando alguns conteúdos. Uma outra
+finalidade seria a solicitação de cadastramento para acessar a rede. Uma
+alternativa de server proxy pra linux é o SQUID.
+
+O que é o DHCP?
+É o cara que distribui configuração de IP automaticamente.
+
+O que é um CLUSTER?
+É um nome dado a um grupo de computadores trabalhando em conjunto ou
+arquitetura de sistema capaz de unir essas máquinas.
+Temos diversos tipos:
+    ← Cluster de alto desempenho: Focado em solucionar problemas que necessitam
+    de muito processamento e entregá-los em um tempo considerável.
+    ← Alta disponibilidade: Focado em manter a aplicação sempre no ar.
+    ← Balanceamento de carga: Dividir as tarefas de forma similar entre nós.
