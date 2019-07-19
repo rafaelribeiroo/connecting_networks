@@ -44,6 +44,13 @@ Qual a diferença entre <megabit> e <megabyte>?
 O que significa a função WDS?
 Permite que um roteador converse com o outro a fim de criar uma rede única.
 
+O que é proxy?
+Você usa ele para agir entre seu "client" e sua conexão de internet, comumente
+chamado de "man in the middle", ele vai servir para você caso queira
+"filtrar" o acesso dos usuários, bloqueando alguns conteúdos. Uma outra
+finalidade seria a solicitação de cadastramento para acessar a rede. Uma
+alternativa de server proxy pra linux é o SQUID.
+
 O que é o DHCP?
 É o cara que distribui configuração de IP automaticamente.
 
