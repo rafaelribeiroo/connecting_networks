@@ -1,0 +1,3 @@
+Priori: Temos as classes de IP (visto no arquivo: "13. Endereçamento..."). Como
+visto, a classe A tem 16.777... de possibilidades, mas e se quisermos apenas
+1.000...? Aí entra o conceito de sub-rede (divisão de possibilidades).
