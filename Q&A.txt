@@ -1,4 +1,4 @@
-O que é redes de computadores?
+<Redes de computadores>?
 Basicamente, se dá por qualquer dispositivo que você tenha que acessa a
 internet e que seja possível realizar cabeamento (ligar uma coisa na
 outra e realizar troca de informações). Não necessariamente
@@ -11,10 +11,10 @@ ser?
 Verifique se os dois estão em canais distintos, pode ser que estão na mesma
 frequência, e um acaba atrapalhando o outro.
 
-O que é o <loopback>?
+<LOOPBACK>?
 Endereço da própria máquina
 
-O que é <downsizing>?
+<DOWNSIZING>?
 Antigamente, era apenas um processador centralizado para comandar todo o
 tráfego de redes e informações, até o ponto que se tornou extremamente
 lento, obrigando as redes a evoluir pro DOWNSIZING, que era o fato de
@@ -22,39 +22,39 @@ remover esse computador "grandão" e transformar em vários
 computadores menores, exercendo funções diferentes
 (servidores).
 
-O que é <gateway>?
+<GATEWAY>?
 É o cara que representa o roteador que estamos conectado.
 
-O que é <ethernet>?
+<ETHERNET>?
 É a tecnologia da rede local (lan), basicamente serve pro modem falar com o
 computador.
 
-Qual a diferença entre <MAN> e <WAN>?
+Difference between <MAN> e <WAN>
 Se utilizarmos apenas uma tecnologia (não apenas ethernet, mas ADSL/...), é
 uma MAN.
 
-O que é um cabo blindado?
+<Cabo blindado>?
 A blindagem serve para combater as ondas eletromagnéticas, se trata de um meio
 externo para não afetar como o sinal é transmitido.
 
-Qual a diferença entre <megabit> e <megabyte>?
+Difference between <megabit> e <megabyte>
 → Mb: taxa de velocidade;
 → MB: armazenamento.
 
-O que significa a função WDS?
+<Função WDS>?
 Permite que um roteador converse com o outro a fim de criar uma rede única.
 
-O que é proxy?
+<PROXY>?
 Você usa ele para agir entre seu "client" e sua conexão de internet, comumente
 chamado de "man in the middle", ele vai servir para você caso queira
 "filtrar" o acesso dos usuários, bloqueando alguns conteúdos. Uma outra
 finalidade seria a solicitação de cadastramento para acessar a rede. Uma
 alternativa de server proxy pra linux é o SQUID.
 
-O que é o DHCP?
+<DHCP>?
 É o cara que distribui configuração de IP automaticamente.
 
-O que é um CLUSTER?
+<CLUSTER>?
 É um nome dado a um grupo de computadores trabalhando em conjunto ou
 arquitetura de sistema capaz de unir essas máquinas.
 Temos diversos tipos:
@@ -62,3 +62,12 @@ Temos diversos tipos:
     de muito processamento e entregá-los em um tempo considerável.
     ← Alta disponibilidade: Focado em manter a aplicação sempre no ar.
     ← Balanceamento de carga: Dividir as tarefas de forma similar entre nós.
+
+<CRON>?
+Serviço do sistema para trabalhar com tarefas agendadas.
+
+Difference between <setup>, <bios> e <post>
+Setup → Programa que vai embutido na placa para configurar seu computador;
+BIOS → Identifica todos os componentes do computador (reconhecimento hardware);
+Post → Testa todos os componentes do computador
+
