@@ -1,0 +1,29 @@
+Priori: O "roteador" que você tem em casa na verdade tem o nome de: gateway –
+todo equipamento que atue em todas as camadas do TCP/IP e que tenha várias
+funções juntos.
+    Algumas de suas funções são:
+    ← Antenas quer dizer que ele é Wi-Fi, o que o torna um AP – dispositivo
+    responsável por transformar sinal cabeado em Wi-Fi;
+    ← Portas amarelas são a função switch (permite passar sinal da internet
+    para rede cabeada);
+    ← Porta azul é o cabo que vai receber o coaxial/fibra óptica.
+
+Reset → Fica segurando por 10seg, até que todas as luzes se apagam e reacendam.
+WPS → Permite conexão de algum dispositivo sem precisar da senha de Wi-Fi, você
+só tenta logar uma vez no Wi-Fi, aperta o botão que ele já libera um acesso.
+MU-MIMO (Multiple-in multiple-out, geralmente 5+ antenas) → Garantir que esse
+roteador consiga falar e receber dados ao mesmo tempo (grupo de antenas só
+pra enviar e um grupo só pra receber).
+
+TOPOLOGIA da rede sem fio
+    ← ADHOC: Não tem um equipamento central fazendo a comunicação, é um
+    dispositivo ligado diretamente ao outro. Ex: bluetooth
+    ← Infraestrutura: Obrigatoriamente têm um equipamento central fazendo a
+    comunicação entre todos.
+
+IEEE
+    ← Ethernet → 802.3 (CSMA/CD)
+    Detecta colisões.
+    ← Wi-Fi → 802.11 (CSMA/CA)
+    Evita colisões, exceto em duas situações: quando você liga o equipamento e
+    quando você conecta um novo na rede.

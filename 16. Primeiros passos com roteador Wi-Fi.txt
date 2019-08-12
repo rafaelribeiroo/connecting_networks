@@ -1,4 +1,4 @@
-Alguns roteadores permitem que você desabilite a função: "RED HOOK", a qual
+Alguns roteadores permitem que você desabilite a função: "ADHOC", a qual
 você só consegue acessar as configurações do roteador quando cabeado, já
 que se outra pessoa saber a senha, ela pode agir de má fé.
 
