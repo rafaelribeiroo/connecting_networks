@@ -1,0 +1,103 @@
+O que é uma sub-rede?
+De acordo com o que foi mostrado no arquivo: "13. Endereçamento...", as redes
+são divididas em grupinhos, sendo eles:
+    A... Comporta 16.777.214 computadores
+    B... Comporta 65.534 //
+    C... Comporta 254 //
+
+Entretanto, e se não precisarmos de todos esses computadores em nossa rede?
+Podemos utilizar uma sub-rede para dividir esses 16.777... em apenas um
+grupinho de 1.000...
+    ← Qual a vantagem de dividir essa rede?
+Suponhamos que temos uma escola com quatro setores/cargos, sendo eles: call
+center (10 pc's)/segurança (20)/coordenação (30)/estoque (100). A rede que
+mais se aproxima do total de computadores é a classe C, que abriga até 254.
+Entretanto, se todos estiverem na mesma rede, todos eles vão se "enxergar"...
+    ← E não é bom?
+Vamos imaginar o final da "arquitetura", teríamos um Wi-Fi onde a secretaria
+"compartilhará" dados com os alunos e vice-versa, o que ocasionaria em uma
+grande quebra de informação e confusão.
+    → Imagina 400 alunos imprimindo inúmeras brincadeiras na impressora da
+    secretária.
+Por isso temos que dividir em sub-rede, para ter um Wi-Fi: "Aluno",
+"Secretaria" etc.
+
+Vamos trabalhar com um IP padrão da classe C:
+192.168.1.10 (255.255.255.0)
+    ← Identificamos qual classe pertence tal IP pelos 3 primeiros octetos
+
+Tabelinha do IP:
+   REDE               HOST                 BROADCAST
+192.168.1.0       192.168.1.1            192.168.1.255
+                      até
+                  192.168.1.254
+               (254 possibilidades)
+
+Vamos utilizar sub-rede agora.
+
+Bora dividir em 3x né? Não! Tem que ser divisão por números pares, porque todos
+são múltiplos de 2. Como é a classe C, nossa sub-rede vai estar no último
+octeto, então obrigatoriamente terá que ser par.
+    ← Quem vai determinar a existência da sub-rede?
+A máscara, se não tiver, não tem como você saber a sub-rede.
+    ← A máscara deverá conter obrigatoriamente um octeto MISTO (que não seja
+    255 ou 0).
+
+Lembrando do nosso IP a ser utilizado: 192.168.1.10
+
+O 1º passo é identificar o octeto MISTO em nossa sequência de máscara.
+    ← 255.255.255.192
+    ← Não podemos ter dois octetos MISTOS em uma mesma máscara.
+    ← Como sabemos que a máscara de sub-rede acima realmente é uma máscara?
+        → Se convertermos ela para binário, tudo que está a esquerda de 0
+        deverá ser 1, e quando começar os 0, tudo tem que ser 0.
+        → Alternou 1 e 0? é IP (classe E)!
+
+2º passo: Determinar o salto.
+    ← Sempre subtrair 256 - <octeto do salto> 292
+    → 64 possibilidades.
+
+3º passo: Determinar todos os endereços de rede.
+4º passo:    // todos os broadcast.
+5º passo:   // todos os hosts.
+
+Nessa tabelinha, já realizaremos os devidos cálculos.
+   REDE            HOST                            BROADCAST
+Smp começa a       Um após a rede até um menor     É sempre o valor da próxima
+partir do 0        que o broadcast                 sub-rede - 1
+192.168.1.0        192.168.1.1 a 192.168.1.62      192.168.1.63     LAB
+
+Colocamos as
+possibilidades
+192.168.1.64       192.168.1.65 a 192.168.1.126    192.168.1.127    CALL
+
+Assim sucessivamente
+até chegar no 256
+192.168.1.128      192.168.1.129 a 192.168.1.190   192.168.1.191    SEC
+                                                   Se não bater 255, tá errado
+192.168.1.192      192.168.1.193 a 192.168.1.254   192.168.1.255    COORD
+
+Não mexemos com esse,
+serve para chegar até onde queremos
+192.168.1.256
+
+Bom saber: Vírus só infecta os dispositivos se você executá-lo. Worm não
+precisa de execução, se pegar infecta todos os dispositivos.
+    ← E como corrige?
+Desligar todos os computadores. Liga de uma em uma e vai removendo o worm.
+
+Exercício da "aula"
+47 – Um administrador responsável por uma rede classe C identificada pelo IP
+192.168.10.0 decidiu dividi-la em 4 sub-redes utilizando a máscara
+255.255.255.192. Sabendo-se que não existe roteamento entre as sub-redes,
+pode-se afirmar que:
+
+I – 192.168.10.15 e 192.168.10.62 podem se comunicar.
+II – 192.168.10.100 e 192.168.10.193 podem se comunicar.
+III – 192.168.10.130 e 192.168.10.125 podem se comunicar.
+
+Estão corretas as assertivas
+a) I e II apenas.
+b) I e III apenas.
+c) II e III apenas.
+d) I, II e III.
