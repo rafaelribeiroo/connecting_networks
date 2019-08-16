@@ -71,3 +71,5 @@ Setup → Programa que vai embutido na placa para configurar seu computador;
 BIOS → Identifica todos os componentes do computador (reconhecimento hardware);
 Post → Testa todos os componentes do computador
 
+<LEDs>?
+É um diodo emissor de luz, a corrente que passa por ele é transformada em luz.
