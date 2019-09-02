@@ -73,3 +73,6 @@ Post → Testa todos os componentes do computador
 
 <LEDs>?
 É um diodo emissor de luz, a corrente que passa por ele é transformada em luz.
+
+Pra que temos um IP público e um privado?
+O privado é pra rede interna, enquanto o público é para navegação.

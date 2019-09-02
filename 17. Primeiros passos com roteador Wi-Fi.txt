@@ -20,7 +20,8 @@ não carrega, mas quando você atualiza a página ele carrega rápido, não é
 problema na operadora, mas porque ele trocou a rota.
     > Não adianta culpar o uber se o caminho estiver congestionado.
 
-Obtendo todos os detalhes da nossa rede: IPCONFIG \all or IFCONFIG -a
+Obtendo todos os detalhes da nossa rede: IPCONFIG \all
+Já no linux, para saber o IP do meu gateway, basta um: route -n
 
 IP ADDR
 O comando acima mostra todas as placas de rede, adaptadores e IP's configurados
