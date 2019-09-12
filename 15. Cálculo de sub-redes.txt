@@ -86,6 +86,10 @@ precisa de execução, se pegar infecta todos os dispositivos.
     ← E como corrige?
 Desligar todos os computadores. Liga de uma em uma e vai removendo o worm.
 
+"E como eu aplico esses conhecimentos através do meu roteador?"
+Primeiro que o roteador que tem na sua casa na verdade é um gateway, para
+dividir uma rede devemos ter um roteador: "Cisco", por exemplo.
+
 Exercício da "aula"
 47 – Um administrador responsável por uma rede classe C identificada pelo IP
 192.168.10.0 decidiu dividi-la em 4 sub-redes utilizando a máscara
