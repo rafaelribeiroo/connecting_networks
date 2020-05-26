@@ -1,3 +1,7 @@
+Priori: Temos as classes de IP (visto no arquivo: "13. Endereçamento..."). Como
+visto, a classe A tem 16.777... possibilidades, mas, e se quisermos apenas
+1.000...? Aí entra o conceito de sub-rede (divisão de possibilidades).
+
 O que é uma sub-rede?
 De acordo com o que foi mostrado no arquivo: "13. Endereçamento...", as redes
 são divididas em grupinhos, sendo eles:
