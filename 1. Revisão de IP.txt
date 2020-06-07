@@ -1,0 +1,30 @@
+Todos os IP's fazem parte de alguma classe (divisão em grupinhos):
+CLASSE      IP               ICANN
+A           0   a 127        2²⁴ → 16.777.216 possibilidades
+B           128 a 191        2¹⁶ → 65.536
+C           192 a 223        2⁸ → 256
+D           224 a 239
+E           240 a 255
+
+Explicações:
+
+As únicas classes que podem ser atribuídas a computadores na internet são
+A // B // C
+
+A classe D é reservada a multicast;
+
+A classe E para teste de novas tecnologias (6g/7g)
+
+
+
+A comunicação pelos IP pode ser de 4 formas
+Unicast: Envia para um único host (1 pra 1) (dispositivo é algo que posso endereçar na rede)
+Multicast (1 para um grupo), se voce tem gatonet voce recebe aquela mensagem (entre em contato com nosso suporte para que seu cpf nao seja), a net envia essa msg a todos que nao pagaram suas faturas
+Broadcast (1 pra todos dentro dessa mesma rede) bbc, o primeiro b é de broadcast, eles enviam pra todos
+Anycast (1 - qualquer um mais proximo), isso funciona mais com DNS.  Quando trabalhamos com IPv6, é possivel que temos varios servidores DNS com o mesmo endereço de IP em diversos locais, entao a requisição é feita pra qualquer DNS que esteja mais perto de vc
+
+
+COMPONENTES DO ENDEREÇO IP
+todo meu endereço IP é dividido em duas partes basicamente
+endereço de rede: determina a qual rede o IP pertence
+endereço de host: determina

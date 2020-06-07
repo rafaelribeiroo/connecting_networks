@@ -1,0 +1,61 @@
+Geralmente quando temos uma rede de computadores configurada, temos dois
+grandes componentes de máquina.
+    <> Temos as máquinas que usam serviços e as máquinas que disponibilizam
+    serviços.
+
+Quando você vai acessar algum sistema pelo seu dispositivo ele se torna um
+cliente, supondo que queiramos acessar o YouTube, o DNS pega esse hostname,
+encaminha pro seu roteador e pergunta se ele sabe chegar. O roteador vai
+gerar um IP e vai encaminhar lá pro YouTube (para os servidores da
+Google).
+    > Servidor basicamente é um computador responsável por disponibilizar
+    serviços e recursos para uma rede.
+    > Não precisa ser de grande porte, ele precisa atender a necessidade.
+
+Mas, qual a diferença entre serviços e recursos?
+Recurso está atrelado mais ao hardware.
+    Ex: quando eu tenho uma impressora compartilhada na minha rede, meu
+    servidor fica por parte de gerenciar, sendo assim um recurso.
+Serviço ao software.
+    Ex: Quando acessa seu gmail, você não consegue apalpar, pois é lógico.
+
+Aplicação → Ele vai prover aplicações.
+WEB → Como um servidor de arquivos, alterando a essência do tipo de arquivo
+(no de ARQUIVOS você pode incluir músicas/filmes/zips), já no web você vai
+colocar arquivos web (HTML/CSS/JS/IMG).
+BD → Guardar dados/fornecer os dados que estão pedindo.
+
+Servidor de COMUNICAÇÃO: Se você está em uma empresa que tem 20/30 computadores
+e precisa realizar a comunicação entre eles, vai ter que usar esse tipo de
+servidor para interligar.
+ARQUIVOS: Computador responsável por armazenar os dados mais importantes. Ao
+invés de efetuar o backup em todos os micros da empresa, canaliza apenas
+em um, além de ser mais seguro.
+IMPRESSÃO: Não basicamente imprime mas gerencia impressoras, os arquivos que
+são impressos...
+BANCO DE DADOS: Capaz de armazenar grande quantidade de dados.
+APLICAÇÃO: Explicando através de uma situação real, em um supermercado que
+tenha 50 caixas, todos utilizam o que chamamos de "terminal burro", já que
+economizam (e muito) para se preocuparem apenas com um de alto custo para
+lidar com todas as requisições/transações/dados.
+WEB: Responsável por interpretar o código de alguma linguagem que você utilize.
+INTERNET: Gerencia as conexões de internet na sua casa. Pode acontecer de você
+ter um gato velox...
+    Mas antes, você sabe o que é um gato velox?
+    > Ao contratar um link de uma operadora qualquer, pode ser que ganhe o
+    modem (se o pacote exceder o mínimo para receber gratuitamente), que
+    receberá o cabo vindo de um switch (que redistribui a outros modem's
+    também). Caso quatro máquinas "conectadas" a esse mesmo switch acessarem um
+    serviço como o facebook pela internet, não causará nenhuma "disrupção",
+    porém se um estiver baixando um filme em 4K, a operadora vai entender que é
+    importante e vai distribuir tudo (ou a maioria) da banda que deveria ir
+    para todos apenas para esse IP porque entendem que se você faz download de
+    algo, deve ser importante (não detém ferramentas que identifica o quê
+    exatamente), com isso você vai afetar indiretamente a conexão dos demais.
+    > VOLTANDO AO CONCEITO <
+O servidor basicamente vai gerenciar essa transação e fazer com que um usuário
+não influencie a conexão do outro, distribuindo igualmente a velocidade.
+
+Entretanto, não adianta nada se não contarmos com uma pessoa monitorando o que
+esses servidores estão gerenciando, daí vêm os desktops/notebook/client para
+conseguir acessar o conteúdo que tenha ali no server.

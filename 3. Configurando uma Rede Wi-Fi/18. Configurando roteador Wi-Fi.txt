@@ -1,0 +1,63 @@
+Antes do tutorial, siga os passos abaixo:
+
+1. Descubra o IP referente ao seu gateway;
+
+    ← Windows: ipconfig \all
+    ← Linux: ip route show | grep 'default via' | tail -1 | awk '{print $3}'
+
+2. Abra-o no seu navegador preferido;
+
+3. Todo roteador tem seu modo de configuração rápida, localize-a.
+
+Vamos as telas de configuração:
+
+1ª tela: Fuso horário (normalmente)
+
+Região: Brasil // Fuso Horário: (GMT-03:00) Brasília, Buenos Aires
+
+2ª tela: Tipo de Conexão de Internet (normalmente)
+
+Antes de escolhermos a opção que atenderá nossa necessidade, precisamos
+entender alguns conceitos, tais quais:
+
+    ← Dinâmico: Toda vez que liga o dispositivo, ele pega um IP novo do modem
+(recomendado a residências);
+    ← Estático: Configurar IP único, pra mim saber qual é para
+eventuais manutenções (recomendado a empresas);
+    ← PPoE: Comunicação direto com a operadora. Posso desabilitar a conexão via
+modem e fazer com que ele conecte na internet utilizando os dados da operadora
+(necessário conhecimento em VCI/VCC), consiste em obter informações que nem
+sempre ela te dá;
+    ← L2TP/PPTP: Protocolo de sessão (modelo OSI).
+
+3ª tela: Clonagem de endereço MAC (normalmente)
+
+Antes de escolhermos a opção que atenderá nossa necessidade, precisamos
+entender o conceito:
+
+Normalmente este recurso é utilizado para que o roteador assuma a "identidade"
+da sua máquina. "Pra quê?". Bom, no estado do RJ existem algumas empresas
+(gato) que provê conectividade para um IP apenas. Clonando o MAC, você
+usa na sua casa inteira pagando para um único dispositivo. STONKS.
+
+4ª tela: Configurações Wireless
+
+Se seu roteador prover Wireless de 2.4 e/ou 5GHZ, vamos as explicações:
+
+• Se deixar as duas Wireless habilitadas, seu roteador vai criar duas redes que
+não vão interferir, pois são de frequências distintas.
+• Para conhecimento, a de 5GHZ tem menos interferência porque não é muito
+utilizada por aparelhos domésticos. Ex: telefone sem fio, microondas...
+
+[ ] Ocultar SSID
+Esse recurso é utilizado para que você possa impedir que seus vizinhos se
+conectem na sua rede. É como se não "existisse" seu roteador, tendo que
+conectar manualmente (informar SSID e senha).
+
+5ª tela: Resumo
+
+Um resumão do que fazemos até aqui.
+
+PS: Essa configuração básica não é muito recomendada, pois pode ser que a Wi-Fi
+fique inconstante, se houver vários roteadores perto de você pode dar problema
+no Wi-Fi e entre outros problemas.

@@ -1,0 +1,15 @@
+Meios de transmissão: Meios físicos utilizados para realizar a comunicação dos
+dispositivos na rede.
+
+Atualmente, há dois grupos de meios de transmissão, sendo eles:
+
+    Meios guiados → São todos os meios que usam cabos.
+        ← Par trançado;
+        ← Coaxial;
+        ← Fibra óptica.
+
+    Meios não-guiados → Propagação atmosférica.
+        ← Wi-Fi;
+        ← Bluetooth;
+        ← NFC;
+        ← Wi-fi direct.

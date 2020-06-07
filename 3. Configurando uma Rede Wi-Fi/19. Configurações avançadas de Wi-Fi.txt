@@ -1,0 +1,207 @@
+Antes do tutorial, siga os passos abaixo:
+
+1. Descubra o IP referente ao seu gateway;
+
+    ← Windows: ipconfig \all
+    ← Linux: ip route show | grep 'default via' | tail -1 | awk '{print $3}'
+
+2. Abra-o no seu navegador preferido;
+
+Vamos as telas de configuração:
+
+<CONFIGURAÇÕES: WI-FI>
+
+1ª: Localize a rede sem fio nas configurações: "Wireless"
+
+<Região>: Brasil // <Fuso Horário>: (GMT-03:00) Brasília, Buenos Aires
+
+[×] Habilitar Rádio Wireless  # Reduz interferência caso vc tenha 2 roteadores
+
+<Nome de Rede (SSID)>: <Nome Preferência>
+
+[ ] <Ocultar SSID>
+A opção: "Ocultar SSID" foi detalhada no arquivo: "18. Configurando..."
+
+Sempre opte pela segurança mais avançada, atualmente são os valores abaixo:
+Segurança: WPA/WPA-Pessoal // Versão: WPA2-P2K // Criptografia: AES
+
+<Senha>: Sempre deixe uma senha alfanumérica com caracteres especiais, ao
+deixar apenas numérica, seu vizinho pode instalar aplicativos WPS e
+quebrá-la.
+
+<Modo>: Modo de operação do seu roteador, qual a tecnologia a ser utilizada
+para fazer a transmissão de dados. Influencia na velocidade do Wi-Fi ao
+configurar.
+
+Conforme visto no arquivo: "16. Autonomia...", o IEEE 802.11 determina que toda
+rede Wi-Fi deve oferecer os padrões abaixo:
+
+    ←  802.11a: Possui 54Mbps de velocidade          → Suporta 5.8GHz+;
+    ←  802.11b: Possui 11Mbps de velocidade          → 2.4GHz+;
+    ←  802.11g: Possui 54Mbps de velocidade          → 2.4GHz+;
+    ←  802.11n: Possui de 63 a 600Mbps de velocidade → De 2.4 a 5.8;
+    ← 802.11ac: Possui 1.5Gbps de velocidade         → De 2.4 a 5.8;
+
+O que torna o primeiro: "802.11a" incompatível com todos os outros, já que ele
+não suporta as demais frequências além de 5.8GHz.
+
+Agora, vamos definir o modo.
+
+Modo: 802.11b/g/n misto
+
+    ← O misto vai funcionar de modo que ele seja compatível com qualquer um dos
+padrões de comunicação, tanto b quanto g quanto n.
+    ← Porém ele perde desempenho/velocidade/abrangência ao tentar comunicar com
+todos os aparelhos. Pra ser compatível, sempre vai ter uma perca.
+
+<Modo>: 802.11n
+
+    ← O único problema é que se você tiver um aparelho mais antigo que não
+suporte placa: "n", ele não vai funcionar... não vai enxergar a Wi-Fi.
+
+<CONFIGURAÇÕES: SITE SURVEY>
+
+Por padrão, há 13 canais homologados pela Anatel, porém os melhores canais para
+Wi-Fi são: 1, 6 e 11; são os que sofrem a menor quantidade de interferência.
+
+Site survey: Análise do ambiente onde nosso roteador está para que possamos
+escolher qual o melhor canal para utilizarmos e nosso Wi-Fi não ficar em
+constante instabilidade
+
+    ← Windows: https://www.cambiumnetworks.com/xirrus/
+    ←   Linux: https://sourceforge.net/projects/linssid/
+    ← Android: https://play.google.com/store/apps/details?id=com.farproc.wifi.analyzer&hl=pt_BR
+    ←     iOS: não tem :(
+
+Baixe o software no SO que estiver e analise quais canais estão sendo menos
+utilizados ao redor e escolha-os.
+
+<CONFIGURAÇÕES: LAN E WAN>
+
+1ª: Localize a rede sem fio nas configurações: "Wan" e vamos aos tipos de
+conexão de internet...
+
+Função <IP estático>: Se eu saber como a rede funciona – qual o padrão de IP
+e/ou endereçamento (classe A/B/C etc), podemos usar esse recurso, ficando da
+seguinte forma:
+
+Endereço IP: O administrador da rede deverá passar
+Máscara de Sub-rede: O administrador da rede deverá passar
+Gateway Padrão: Endereço de IP do servidor da rede
+DNS Primário: 8.8.8.8  # Padrão Google
+DNS Secundário: 8.8.4.4  # Padrão Google
+
+Função <PPPoE>: Se eu quiser que meu roteador faça conexão com a operadora
+diretamente, se souber os usuários da OI velox pode conectar na rede deles.
+
+Nome de usuário: oi@oi // Senha: adm12345 // Endereço IP: IP da operadora
+DNS Primário: DNS da operadora // DNS Secundário: operadora
+
+Função <BigPond>: Não utilizado no Brasil, mesma coisa que PPPoE só que pra
+Europa.
+
+<Função l2TP/PPTP>: Protocolos utilizados para criar túneis em redes VPN.
+    ← VPN: Sempre que precisamos extender a rede física de algum lugar esse
+    recurso se mostra útil. Por exemplo: no caso do estudonauta, se eles
+    quisessem abrir uma filial em RR, ao invés de passarem os cabos do
+    RJ até RR para as duas se comunicarem, bastava criar uma rede privada.
+    ← Quando a justiça brasileira bloqueia o acesso ao WhatsApp, você pode
+    instalar algum aplicativo de Whatsapp que provê um túnel de VPN
+    apontando aos servidores do whatsapp para que sua operadora/provedora
+    não consiga saber o que você está fazendo.
+    ← Eu vou conseguir fazer isso? Não! Por que você precisa ter um serviço
+    de VPN contratado na sua casa.
+
+Função <IP dinâmico>: Normalmente você vai usar essa opção, vai falar com o
+modem e vai usar.
+
+2ª: Vá a seção LAN do seu roteador.
+
+Se houver mais de 1 roteador em sua residência, você vai ter que alterar o IP
+que aponta ao gateway de um deles, trocando apenas o 3º octeto.
+
+Endereço IP: 192.168.<1,2,3,4,...>.1
+
+Configurações:
+
+[×] <Habilitar Servidor DHCP>
+
+<Pool Address IP>: 192.168.0.10 – 192.168.0.199
+
+Pra você escolher a quantidade de IPs que você quer que sua rede distribua
+automaticamente. Se quiser colocar mais posteriormente, precisará
+configurar manualmente.
+
+TxBF, MU-MIMO: [ ] <Habilitar Servidor DHCP>
+
+Se estiver desabilitado, habilite-o para que seu roteador ganhe mais
+desempenho, como visto no arquivo: "16. Autonomia...".
+
+<Administração>: Sempre que possível, altere as credenciais de root para acessar
+as configurações.
+
+Antes de prosseguirmos para a última configuração, vamos compreender o que são
+os endereços MAC para que possamos liberá-los e/ou bloqueá-los em nossa rede.
+
+O Media Access Control (MAC) segue o padrão abaixo:
+
+ff:ff:ff:ff:ff:ff, onde:
+    ← Primeira premissa: O endereço MAC é dividido em 2 partes;
+    ← 1ª parte: Os 3 primeiros bytes (OUI) representam o fabricante;
+    ← 2ª parte: Os 3 últimos bytes correspondem ao dispositivo.
+
+Como descubro meu MAC no linux?
+ifconfig | grep ether | awk '{print $2}'
+
+Voltando a prática, para prosseguirmos devemos localizar: <Controle de Acesso>
+
+Ao optar pelo: "Habilitar MAC", apenas os que estão permitidos enxergarão sua
+Wi-Fi e na opção de desabilitar, todos poderão ver, exceto a galera que está
+na "lista negra".
+
+<CONFIGURAÇÕES: QoS>
+
+o QoS é um serviço que existe nas redes de computadores que visa garantir que
+aqueles serviços que estão sendo executados na rede vão utilizar apenas a
+quantidade de banda para que o serviço funcione de maneira perfeita.
+
+Agora vamos fazer a limitação da banda, quando você nao quer bloquear a pessoa
+de acessar sua rede porém não quer que ela utilize muita banda.
+
+Suponha que sua irmã esteja assistindo netflix e voce esteja baixando Matrix em
+4k, com o QoS você vai baixar o filme sem prejudicar sua irmã que vai continuar
+assistindo netflix com uma qualidade decente.
+
+Localize e habilite o QoS no roteador
+
+[×] <Habilitar QoS>
+
+Informe o total do seu plano contratado
+
+<Largura de Banda DOWNLOAD>: 100 // <Largura de Banda UPLOAD>: 50
+    ← Geralmente sua taxa de upload equivale a 10% download
+
+Iremos definir os graus de prioridade para segregar os futuros dispositivos.
+
+De acordo com a taxa de upload/download informada acima, podemos deixar como:
+    ← <Alta prioridade>: 60
+    ← <Média>: 35
+    ← <Baixa>: 5
+
+Na seção abaixo do "roteador", correlacionaremos os dispositivos às prioridades
+
+"Se eu estiver alocado no grupo: Alta prioridade, eu só poderei usar os 60%?"
+Nem sempre, quando não houver outros dispositivos utilizando a mesma rede, os
+100% serão seus, o "roteador" só vai fazer a segregação quando haver mais de
+1 dispositivo, interferindo o outro.
+
+PORÉM, se seu "roteador" for de baixo custo, devemos ir em outra seção antes
+de realizar esses procedimentos.
+
+Bora localizar uma seção nomeada: "<Vínculo IP e MAC>"
+    ← Nessa seção você define uma prioridade pro IP, precisando fazer antes o vinculo de IP com MAC
+pq se nao toda vez que o celular desconectar da sua rede, ele vai trocar de IP na proxima conexao
+e nao vai valer a limitação, apos fazer o vinculo vá até o QOS e defina prioridade
+de certo IP a tal IP prioridade tal.
+
+Lembrando que ao ocultar SSID, devemos colocar maiusc e minusc pois é case sensitive

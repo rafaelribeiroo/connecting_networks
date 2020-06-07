@@ -1,0 +1,50 @@
+Priori: Você deve ser capaz de distinguir as tecnologias utilizadas nos
+cabos/equipamentos.
+
+Situação hipotética: Quando você vai ajudar a/comprar um equipamento de rede
+e/ou cabo, ele vem com as seguintes descrições:
+→ 10BASET;  → 10BROAD36;  → 100BASET4;  → 1000BASELX;  → 10BASEF;  → 10GBASET;
+
+Os tipos citados acima determinam: qual o tipo de cabo/qual a velocidade/qntde
+de frequência que ele interpreta/etc... Tudo isso é importante pra você não
+comprar equipamento impróprio para sua determinada situação (isso é, que não
+suporte o cabo que você use e/ou comprar cabo que não funcione direito).
+
+Vamos a compreensão da sopa de letrinhas então:
+
+    → Base/broad: É a forma como os sinais são enviados no cabo.
+    São dois tipos:
+        ← Baseband: Toda transmissão de sinal que possui apenas uma
+        frequência/canal de dados em um envio (uma tv que só transmite globo).
+            > Tipo de transmissão digital (transmissão 0, 1);
+            > Curtas distâncias.
+        ← Broadband: Toda transmissão que possua várias frequências/canais.
+            > Tipo de transmissão analógica;
+            > Longas distâncias.
+
+    → Os dígitos que antecedem os nomes determinam a velocidade que esse
+    determinado cabo/equipamento suporta.
+        ← 1 suporta 1mbps;
+        ← E assim sucessivamente.
+
+    → Se houver a letra T no final:
+        ← Twisted par: Par trançado.
+
+    → Tx: padrão sem base T.
+        ← Full-duplex.
+
+    → T4: Um pouco inferior, para ele alcançar 100Mb, necessita de 4 pares de
+    fios. Lembrando, um único par trançado chega até 100Mb.
+
+    → Os dígitos que sucedem os nomes determinam a distância que esse cabo e/ou
+    equipamento pode chegar.
+        ← base2: Vai 2x mais longe que o par trançado (que vai até 100m), no
+        caso 200. Entretanto, na prática vai até 185 (sempre sofre perca);
+        ← base5: 500metros.
+
+    → fl (fiber link):
+        ← Fibra de link.
+    → fx: fiber extend.
+    → lx: long extend.
+    → sx: short extend.
+    → lr: long range.

@@ -1,0 +1,28 @@
+Segmentei as topologias em arquivos individuais por serem "complexas" a quem
+não compreende muito.
+
+Na topologia física ESTRELA há um equipamento central (hub/switch/router/
+server), onde todas as transmissões entre os dispositivos OBRIGATORIAMENTE deve
+passar por esse equipamento.
+HOW WORK COMMUNICATION: Se o dispositivo 1 quiser comunicar com o 2, ele envia
+a requisição pro equipamento central, que direciona até o destino e traz a
+resposta.
+
+CARACTERÍSTICAS
+→ Ponto-a-ponto: Por ter dois nós nas comunicações (do pc pro equipamento);
+→ Tipo transmissão: Pode ser HALF-DUPLEX...
+    Se o equipamento central for o HUB, já que toda a informação que chega a
+    uma porta, ele repete para todos os outros computadores.
+→ ou FULL-DUPLEX
+    Caso o equipamento for switch/router/server, pois podemos enviar e receber
+    ao mesmo tempo.
+→ Aceita os 3 tipos de cabeamento abaixo:
+    ← Par trançado;
+    ← Coaxial;
+    ← Fibra óptica.
+
+Na ESTRELA, temos as seguintes topologias LÓGICAS:
+    → Ethernet (10mbps);
+    → Fast ethernet (100mbps);
+    → Gigabit ethernet (1.000mbps);
+    → 10 Gigabit ethernet (10.000mbps).

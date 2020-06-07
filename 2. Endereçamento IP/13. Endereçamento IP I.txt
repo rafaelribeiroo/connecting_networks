@@ -1,0 +1,39 @@
+Endereço utilizado para identificar os dispositivos na rede.
+    > Cada cliente é "presenteado" com apenas um IP para enviar requisições aos
+    servidores, porém na maioria das vezes ele é estático (altera regularmente)
+    Já os servidores tem IP fixo (dinâmico) pra ser identificado mais fácil.
+
+Um IPv4 (mais popular) possui quatro octetos de números, o computador vê tudo
+como binário (já o IPv6 vê como hexadecimal).
+    ← Porque são chamados octetos?
+Porque se converter o primeiro octeto: "192" para binário, vão ser 8bits (0/1).
+
+Portas lógicas
+
+    NOT     NAND     NOR     OR     AND
+                                    Os equipamentos usam essa porta para fazer
+                                    cálculo de máscara dispensando informações
+                                    adicionais
+
+
+Todos os IP's fazem parte de alguma classe (divisão em grupinhos):
+CLASSE      IP               ICANN
+A           0   a 127        2²⁴ → 16.777.216 possibilidades
+B           128 a 191        2¹⁶ → 65.536
+C           192 a 223        2⁸ → 256
+D           224 a 239
+E           240 a 255
+
+Porque até 255?
+Pois é o valor máximo que posso obter com 8bits
+2⁸ = 256
+Mas são 255 combinações já que o 0 conta também
+
+Por isso a rede na sua casa começa com 192 (pertencente à classe C), é a classe
+que mais se aproxima da sua necessidade.
+
+Prefixos
+    > Multicast: Para um grupo seleto de pessoas;
+    > Unicast: Manda mensagem pra um endereço único (como DB);
+    > Broadcast: Transmite pra todos (na mesma rede);
+    > Anycast: Qualquer um mais próximo.

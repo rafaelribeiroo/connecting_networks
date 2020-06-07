@@ -1,0 +1,46 @@
+Para a compreensão da evolução, precisamos conhecer a origem primeiro.
+
+    > A origem das redes veio da necessidade das pessoas se comunicarem.
+    Analogia: Antigamente, homens da caverna podiam conversar por meio
+    de gesticulações quando próximos, ao aumentar a distância, podiam
+    usar fogo e fumaça, porém, absurdamente longe, não havia forma
+    alguma de se relacionarem.
+
+Em 69, surgiu a comunicação entre redes (consistia em compartilhar dados entre
+quartéis generais). Essa comunicação era feita através de um mainframe e
+terminais (PC's primordiais). O grande problema é que haviam apenas 4
+pontos de acesso comunicáveis (espalhados).
+    > Foi então que surgiu o PROTOCOLO – um conjunto de regras e ações que a
+    rede têm que seguir para que ocorra a transmissão.
+    < "Se todos não seguirem a mesma regra, como vamos saber o que falar e
+    quando falar?"
+    Com isso, criaram o idioma único para que todos os pontos conseguissem
+    conversar entre si.
+
+Assim que surgiram os protocolos, nasceu o: TCP/IP – basicamente transmite as
+informações em bloquinhos e passa uma identificação (consiste em 4 camadas).
+    → Suponhamos que quero enviar uma msg, o protocolo TCP/IP vai pegar ela,
+    quebrar tudo à medida que vai enviando pedacinho/pedacinho pra um
+    endereço que é dado pelo IP;
+        → O IP vai separar a informação e enviar por pedaços; no destinatário,
+        o TCP vai desempacotar e entregar.
+
+    Posteriormente, dentro do TCP/IP, nasceu um protocolo: DNS – um serviço
+    interno (tipo uma agenda eletrônica).
+    → Basicamente, são vários servidores (13 ao redor do mundo, 2019), cuja
+    função consiste em
+        "Usuário digita o hostname > DNS busca o IP para exibir a página"
+
+CURIOSITY
+Quando você quer acessar a página no Facebook, como você acha que a comunicação
+trafega? Porque o servidor que provê o facebook não está no Brasil.
+    > A maior parte das comunicações são feitas por cabos submarinos, já que
+    por satélite é muito lento (apenas 1% de toda a comunicação é feita)
+
+Mas afinal, o que são redes de computador?
+Basicamente, se dá por qualquer dispositivo que você tenha que acessa a
+internet e que seja possível realizar cabeamento (ligar uma coisa na
+outra e realizar troca de informações). Não necessariamente
+precisamos de um dispositivo para ter uma rede, apenas
+cabos (através de um crossover transferimos dados
+entre pc's)
