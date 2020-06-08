@@ -21,6 +21,8 @@ Vamos as telas de configuração:
 
 [ ] <Ocultar SSID>
 A opção: "Ocultar SSID" foi detalhada no arquivo: "18. Configurando..."
+    ← Lembrando que ao ocultar SSID, devemos colocar maiúscula e minúscula,
+    pois é case sensitive.
 
 Sempre opte pela segurança mais avançada, atualmente são os valores abaixo:
 Segurança: WPA/WPA-Pessoal // Versão: WPA2-P2K // Criptografia: AES
@@ -199,9 +201,8 @@ PORÉM, se seu "roteador" for de baixo custo, devemos ir em outra seção antes
 de realizar esses procedimentos.
 
 Bora localizar uma seção nomeada: "<Vínculo IP e MAC>"
-    ← Nessa seção você define uma prioridade pro IP, precisando fazer antes o vinculo de IP com MAC
-pq se nao toda vez que o celular desconectar da sua rede, ele vai trocar de IP na proxima conexao
-e nao vai valer a limitação, apos fazer o vinculo vá até o QOS e defina prioridade
-de certo IP a tal IP prioridade tal.
-
-Lembrando que ao ocultar SSID, devemos colocar maiusc e minusc pois é case sensitive
+    ← Faremos agora o vínculo de IP e MAC, caso contrário toda vez que o
+    dispositivo desconectar você vai precisar liberá-lo novamente na
+    próxima conexão, pois o IP mudará.
+    ← Após realizar o vínculo vá até o QoS e defina a prioridade de certo IP a
+    tal IP, seguindo a regra da prioridade.
