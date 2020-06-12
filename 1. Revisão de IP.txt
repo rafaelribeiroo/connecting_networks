@@ -25,6 +25,93 @@ Anycast (1 - qualquer um mais proximo), isso funciona mais com DNS.  Quando trab
 
 
 COMPONENTES DO ENDEREÇO IP
-todo meu endereço IP é dividido em duas partes basicamente
-endereço de rede: determina a qual rede o IP pertence
-endereço de host: determina
+
+192.168.1.1
+    todo endereço IP é dividido em duas partes basicamente, arquivo tal vera que é dividido em 3 mas deixa pra dps
+
+endereço de rede: determina a qual rede o ip pertence
+
+endereço de host: determina o dispositivo dentro da rede
+
+Exemplo: é como seu numero de celular (21) 9 9999 9999
+O DDD 16 seria o endereço de rede (estado de SP) e os 9 digitos o endereço de host
+    Entretanto nos IPs nao temos essa separação tão distinta, 2 numerozinhos e 9 seguidos
+    o endereço IP a gente tem que saber identificar isso no endereço IP
+
+entao podemos ter o mesmo numero de host porem de rede diferente
+21 99999 9999
+11 99999 9999
+
+DETERMINANDO REDE E HOST
+10.0.1.100
+O primeiro octeto é classe A conforme começo do arquivo
+O que vem depois é o host
+
+
+172.16.1.10
+os 2 primeiros octetos são a rede (classe B), o que resta é dispositivo
+
+se eu quiser que todos os hosts se comuniquem, temos que começar todos os hosts com IP
+172.16, depois pode colocar o que quiser
+
+
+192.168.1.1
+a rede de classe C é definida pelos 3 primeiros octetos
+Por isso quando tem 2 router, tem que mudar o 3o octeto, pq o ultimo é hosts.
+
+quando é rede A, como apenas o primeiro é definido como rede, podemos ter 255 combinações pra hosts
+no 2o 3o e 4o octeto, resultando assim em 16.777.216 possibilidades
+
+rede B como só tem 2 hosts: 65.536
+
+rede C 256 combinações
+
+ENUNCIADO EXERCICIO
+
+1. Determine a identificação de rede dos IPs abaixo:
+a) 218.135.214.1   Classe C
+b) 18.135.218.1    Classe A
+c) 244.255.255.256 Não possui rede e host (classe e) e alem disso tem 256, não existente
+d) 1.0.0.0         Classe A
+
+2. Determine a identificação de host dos IPs abaixo:
+Circule o que são hosts
+a) 198.235.240.1    host .1
+b) 0.1.128.1        não é utilizado, nao pode ser atribuido, inicia em 0
+c) 80.1.130         IP inválido, deve ter 4 octeto
+d) 238.100.1.2      não possui rede/host
+
+MASCARAS DE REDE PADRÃO
+
+precisamos informar ao pc qual a rede, o host, a mascara e tudo o mais
+
+Apenas as classes A B C porque eles podem ser atribuidos a rede/host
+
+A - R.H.H.H
+B - R.R.H.H
+C - R.R.R.H
+
+A - 255.0.0.0  256*256*256 (0 ATE 255) 16.777.XXX
+B - 255.255.0.0
+C - 255.255.255.0
+classe C porque cabe menos computadores
+
+
+CIDR (CLASSLESS INTER-DOMAIN ROUTING) os IPs foi pensado ali em 1995 porque tinha uma quantidade
+limitada fixa e os caras ja previram que iam acabar, entao começaram a bolar uma solução.
+O ultimo bloco de IP foi fornecedido em 2010 e uma dessas soluções foi o CIDR.
+    Eu consigo fazer redes menores para adequar a necessidade da minha empresa.
+Na sua casa tem 4 computadores e a classe C cabe 254, ai entra o CIDR.
+
+Exemplo, pega um endereço de classe A
+A > 89.0.0.0    16.777.214 possibilidades
+    Se dermos esse endereço pro curso em video (a icann dar no caso, ja que é o órgão) representante dela no br é nic.br
+ngm mais no mundo pode usar, e o estudonauta tem 3 computadores la
+
+E se uma nova empresa precisar de IP? Não não pode usar
+icann distribuia a culhão mesmo ate que começou a acabar por causa dessa liberação aleatoria
+
+entao surgiram os endereços de IP
+classfull > a,b,c (classe cheia)
+classless > nao possui classes obrigatoriamente, vai depender da mascara  (podemos fazer o que quisermos de acordo com nossa necessidade)
+
