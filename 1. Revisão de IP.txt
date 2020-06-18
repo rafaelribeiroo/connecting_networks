@@ -115,3 +115,50 @@ entao surgiram os endereços de IP
 classfull > a,b,c (classe cheia)
 classless > nao possui classes obrigatoriamente, vai depender da mascara  (podemos fazer o que quisermos de acordo com nossa necessidade)
 
+CONVERTENDO MASCARAS PADRAO PARA ABREVIADAS
+
+mascara de rede padrão - cidr
+
+a: 255.0.0.0.0 >> CORRESPONDENTE CIDR >> /8
+b: 255.255.0.0 >> CORRESPONDENTE CIDR >> /16
+c: 255.255.255.0 >> CORRESPONDENTE CIDR >> /24
+
+De onde surgiu 8, 16 e 24? Porque quando convertemos de decimal pra binario temos:
+quantos uns temos?
+
+1 2 4 8 16 32 64 128 = 255
+1 1 1 1  1  1  1   1 = 8bits 1
+
+usando cidr nossa mascara fica um pouco diferente
+
+255.255.255.192
+ 8   8   8
+
+e o 192?
+precisamos da tabelinha
+
+sempre comece pelo maior valor e vai de tras pra frente
+1 2 4 8 16 32 64 128
+               1   1
+
+entao essa mascara de rede padrão 255.255.255.192 corresponde ao CIDR /26
+                                    8 + 8 + 8 + 2 = 26
+
+
+VAMOS AO INVERSO AGORA, DE CIDR PARA PADRÃO
+
+/8 > IIIIIIII (todo grupo de 8bits é um octeto), então como só tem oito, sabemos que é 255.0.0.0. Porque não é 10101 no primeiro octeto e nos outros também até dar 8? Pq só é mascara de rede quando é sequencial, então sempre será assim 11111111.11111111.00000000.00000000 (de forma sequencial), intercalou ele sabe que é endereço IP e não máscara de rede (tudo 1 prum lado, tudo 0 pro outro).
+/16 > IIIIIIII.IIIIIIII.00000000.00000000 255.255.0.0
+/28 > IIIIIIII.IIIIIIII.IIIIIIII.IIII0000
+        255         255     255     só 4bits 1? 240
+
+1 2 4 8 16 32 64 128 = 255
+         1  1 1 1
+
+Como fazer mais rapido?
+se for sei la
+/19
+vai completando sequencialmente até atingir o 19
+4bits 1 da 8
+4bits 1 da 8 = 16
+3bits 1 3 chegando ao 19, ai jogamos na tabelinha
