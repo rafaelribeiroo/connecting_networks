@@ -162,3 +162,21 @@ vai completando sequencialmente até atingir o 19
 4bits 1 da 8
 4bits 1 da 8 = 16
 3bits 1 3 chegando ao 19, ai jogamos na tabelinha
+
+exercicios
+
+1. Dê a máscara de rede padrão:
+a) 187.218.130.1
+b) 200.130.1.11
+c) 10.217.130.1
+
+2. Converta padrão para CIDR
+a) 255.248.0.0
+b) 255.255.248.0
+c) 255.249.0.0
+d) 255.255.255.252
+
+3. Converta CIDR > padrão
+a) /29
+b) /9
+c) /30
