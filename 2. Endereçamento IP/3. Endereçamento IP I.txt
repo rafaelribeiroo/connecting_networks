@@ -1,12 +1,80 @@
-Endereço utilizado para identificar os dispositivos na rede.
-    > Cada cliente é "presenteado" com apenas um IP para enviar requisições aos
-    servidores, porém na maioria das vezes ele é dinâmico (altera regularmente)
-    Já os servidores tem IP fixo (estático) pra ser identificado mais fácil.
+IP basicamente é um endereço que é utilizado para identificar os dispositivos
+na rede.
+    ← Em uma rede o cliente e também o servidor obrigatoriamente recebem um IP;
+    ← Normalmente os endereços de servidores são fixos (estático) para que todo
+mundo possa "achar" ele, pois quando trocam IP dele, geralmente tem que
+replicar para toda a internet, demorando cerca de 24hrs;
+    ← Geralmente os endereços residenciais variam (dinâmico), pois é muito
+difícil a pessoa ficar conectada 24hrs por dia/7 dias por semana.
 
-Um IPv4 (mais popular) possui quatro octetos de números, o computador vê tudo
-como binário (já o IPv6 vê como hexadecimal).
-    ← Porque são chamados octetos?
-Porque se converter o primeiro octeto: "192" para binário, vão ser 8bits (0/1).
+NOTA: IPv4 nós vemos em decimal e em IPv6 em hexadecimal, já nos dispositivos é
+tudo binário.
+    ← Um IPv4 é composto de quatro octetos;
+    Por que são chamados octetos?
+    ← Porque ao converter qualquer "octeto" para binário, teremos 8 bits.
+
+Todos os IP's fazem parte de alguma classe – divisão em grupos, sendo eles:
+
+CLASSE          IP                    ICANN
+     A       0   a 127        2²⁴: 16.777.216 possibilidades
+     B       128 a 191        2¹⁶: 65.536          //
+     C       192 a 223         2⁸: 256             //
+     D       224 a 239
+     E       240 a 255
+
+Explicações sobre a "tabelinha acima"...
+
+• As únicas classes que podem ser atribuídas a dispositivos na internet são
+                             A // B // C
+    ← A classe D é reservada a multicast;
+    ← A classe E é reservada a testes de novas tecnologias (talvez um 7g);
+
+•• "Por que a última sequência de IP finaliza em 255?"
+    Porque é o valor máximo que podemos obter com 8 bits: 2⁸ = 256
+
+"O que é esse multicast citado na linha 29?"
+    A comunicação pelos IP's podem ocorrer de quatro formas, sendo elas:
+    ← Unicast: Envia para um único host (1 ↔ 1);
+    ← Multicast: Envia para um grupo seleto de pessoas (1 ↔ GRUPO);
+    ← Broadcast: Envia para todos dentro da rede. Por exemplo: BBC – o b de
+broadcast (1 ↔ TODOS DENTRO DA REDE);
+    ← Anycast: Envia para qualquer um próximo. Por exemplo: CDN (1 ↔ QUALQUER
+UM PRÓXIMO).
+
+Todo endereço IP é dividido em duas partes basicamente, dentre elas:
+    ← endereço de rede: Determina a qual rede o IP pertence;
+    ← endereço de host: Determina o dispositivo dentro da rede.
+    O que é dispositivo? Cheque no arquivo: "Q&A.txt"
+
+Não entendeu o que foi informado da linha 10 até a 13? Explicação abaixo
+
+========================================================================
+Para uma melhor compreensão, vamos trabalhar com exemplo. Pense em seu
+número de telefone.
+
+Ex: (16) 9.9999-9999
+    ← o DDD seria meu endereço de rede (no meu caso DDD 16)
+    ← o restante meu endereço de host
+
+Entretanto, nos IPs não temos essa separação tão distinta: um conjunto
+de 2 números para definir o de rede e 9 seguidos definindo o host. Nos
+endereços IPs nós temos que saber identificar.
+
+Podemos ter a mesma identificação de host – mesmo número de celular,
+porém de rede (DDD) diferente.
+========================================================================
+
+Vamos determinar agora o que é rede e o que é host (verifique arquivo: "4.
+Endereçamento...).
+
+
+
+
+
+
+
+
+
 
 Portas lógicas
 
@@ -16,24 +84,5 @@ Portas lógicas
                                     adicionais
 
 
-Todos os IP's fazem parte de alguma classe (divisão em grupinhos):
-CLASSE      IP               ICANN
-A           0   a 127        2²⁴ → 16.777.216 possibilidades
-B           128 a 191        2¹⁶ → 65.536
-C           192 a 223        2⁸ → 256
-D           224 a 239
-E           240 a 255
-
-Porque até 255?
-Pois é o valor máximo que posso obter com 8bits
-2⁸ = 256
-Mas são 255 combinações já que o 0 conta também
-
 Por isso a rede na sua casa começa com 192 (pertencente à classe C), é a classe
 que mais se aproxima da sua necessidade.
-
-Prefixos
-    > Multicast: Para um grupo seleto de pessoas;
-    > Unicast: Manda mensagem pra um endereço único (como DB);
-    > Broadcast: Transmite pra todos (na mesma rede);
-    > Anycast: Qualquer um mais próximo.
