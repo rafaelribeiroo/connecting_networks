@@ -1,32 +1,94 @@
 Priori: Nunca diga que sabe de tudo! Porque quando você pronuncia isso, se
 convence que sabe tanto que não precisa mais estudar.
 
-IP's restritos e privados: Não é que não podem ser utilizados, mas são
-específicos pra determinadas situações.
+Vamos fazer uma colinha, pois isso é de extrema importância.
 
-    IP's            Máscara
-    10.0.0.0        /8         <
-    172.16.0.0      /12        <   CIDR
-    192.168.0.0     /16        <
+=======================================
+A   ↔     0 a 127   ↔   2²⁴: 16.777.216
+B   ↔   128 a 191   ↔   2¹⁶: 65.536
+C   ↔   192 a 223   ↔    2⁸: 256
+D   ↔   224 a 239
+E   ↔   240 a 255
+=======================================
 
-São adequados e utilizados somente em rede interna, por isso sempre que você
-compra seu roteador, é possível ver na parte de trás: "192.168". Esse IP não
-é porque é padrão da tp-link nem nenhum outro fabricante, mas porque é
-restrito pra rede local.
+• As classes dos IPs são definidas pelo primeiro octeto.
+    ← Exemplo classe A: 10.0.1.100
+    ← Exemplo classe B: 190.2.2.20
+    ← Exemplo classe C: 192.10.1.1
 
-Outros são
-> 127.0.0.0: Comumente utilizado na programação, utilizado pra acessar o
-servidor. Corresponde ao próprio computador (loopback).
-> 169.254.0.0: APIPA do endereço IP quando não acha o roteador na rede, IP de
-erro (quando não acha o DHCP nem ninguém que tá distribuindo IP).
-> 0.0.0.0: Inicialização, utilizado quando o pc inicia.
+•• Os endereços de rede dos IPs são definidos de acordo com as classes.
+    ← Exemplo classe A: <Rede>.<Host>.<Host>.<Host>
+    ← Exemplo classe B: <Rede>.<Rede>.<Host>.<Host>
+    ← Exemplo classe C: <Rede>.<Rede>.<Rede>.<Host>
+    Os hosts são dispositivos.
 
-Para configuração, não podemos alterar qualquer um dos octetos, pois as
-máscaras (classes) nos impedem.
-    A: R.H.H.H
-    B: R.R.H.H
-    C: R.R.R.H
+••• O que são aqueles números gigantescos ali dentre os sinais de igual? Vamos
+lá, quando é classe A, como apenas o primeiro octeto é definido como endereço
+de rede, se multiplicarmos os 3 octetos de endereços de hosts (256 cada um),
+resultará em 16.777.216 possibilidades e, assim sucessivamente.
 
-Os R significam rede, enquanto os H os hosts. Podemos modificar os hosts a
-vontade, mas a rede deve permanecer igual (muitos confundem que precisa
-ser 127.0.0.1, mas só o 127 importa).
+Para realizar alguns exercícios se ficou bem claro, cheque o arquivo: "5.
+Exercício...".
+
+Ao configurar uma rede, nós devemos como profissionais/curiosos informar qual a
+rede, qual o host, qual a máscara e etc. Apenas as classes A, B e C, como já
+compreendido no arquivo: "3. Endereçamento...".
+
+"Então podemos utilizar qualquer IP contanto que respeitamos as classes?"
+    Sim e não, pois infelizmente existem IPs restritos/privados – não é que
+não podem ser utilizados, mas são específicos para determinadas
+situações, tais como:
+    ← IP    //    CIDR
+    ← 10.0.0.0    /8
+    ← 172.16.0.0  /12
+    ← 192.168.0.0 /12
+    ← São adequados/utilizados em rede interna, você já deve ter visto na parte
+de trás de um roteador recém-comprado um IP 192.168.x.x, não é que seja uma
+convenção da marca, mas é por que é restrito para redes locais.
+
+    ← 127.0.0.0/127.x.x.x corresponde ao próprio computador (loopback),
+bastante utilizado na programação.
+    ← 169.254.0.0 é utilizado quando não acha o roteador/DHCP na rede (APIPA do
+endereço IP).
+    ← 0.0.0.0/0.x.x.x utilizado como um curinga (tipo o * em regex) para
+vincular a todos os IPs.
+    ← 255.255.255.255/255.x.x.x utilizado para indicar um broadcast local.
+    ← Entre outros.
+
+"O que é aquele acrônimo: "CIDR" informado na linha 41?"
+    CLASSLESS INTER-DOMAIN ROUTING. Os IPs foram idealizados em 1995 e servia
+muito bem, conforme o tempo foi passando os criadores previram que iam acabar
+a quantidade de hosts devido a quantidade bem limitada, nisso começaram a
+pensar em uma solução e, o CIDR foi uma das soluções encontradas.
+    ← Basicamente com ele nós conseguimos criar redes menores para adequar a
+necessidade.
+    ← "Quero adequar minha rede para suportar apenas 4 dispositivos" << OK, é
+possível, devemos apenas implementar o CIDR.
+
+Não entendeu o que foi informado da linha 58 até a 66? Explicação abaixo
+
+========================================================================
+Para uma melhor compreensão, vamos trabalhar com exemplo. Pense que você
+resolveu empreender e criar uma empresa, chamada XPTO, suponhamos que
+tenha bastante empenho e que o negócio cresça muito.
+
+Você vai ser o responsável por criar/realizar upgrade da rede da sua
+companhia e acha que a classe que mais te atenderá é a A e, ao mesmo
+tempo não quer suporte para 16 milhões de dispositivos, até que
+resolve utilizar o CIDR para adequar mais a sua necessidade.
+
+Nesse caso você irá ligar para a NIC.BR (ICANN é o órgão, enquanto a NIC
+é a representante brasileira) e solicitar que reservem o endereço de
+rede 89.0.0.0 para a sua empresa. Se seu pedido for aprovado, mais
+ninguém no mundo poderá utilizar essa faixa de IP.
+    ← No passado a ICANN distribuia faixas de IP a torto e a direito,
+até que com o tempo eles viram que era uma prática burra, pois a
+liberdade era muito grande.
+
+Com isso viram que o CIDR era a solução mais efetiva.
+========================================================================
+
+Após a implementação do CIDR, o termo Classless ficou bastante conhecido
+    ← Classful (pré-CIDR): Classes A/B/C cheias.
+    ← Classless: Não possui classes obrigatoriamente, vai depender da máscara
+podendo fazer o que quisermos de acordo com nossa necessidade.
