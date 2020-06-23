@@ -76,3 +76,6 @@ Post → Testa todos os componentes do computador
 
 Difference between IP <público> e <privado>
 O privado é pra rede interna, enquanto o público é para navegação.
+
+<DISPOSITIVO>?
+Um dispositivo é algo que podemos endereçar na rede.
