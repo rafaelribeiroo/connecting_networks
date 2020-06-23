@@ -1,0 +1,11 @@
+1. Determine a identificação de rede dos IPs abaixo.
+a) 218.135.214.1
+b) 18.135.218.1
+c) 244.255.255.256
+d) 1.0.0.0
+
+2. Determine a identificação de host dos IPs abaixo.
+a) 198.235.240.1
+b) 0.1.128.1
+c) 80.1.130
+d) 238.100.1.2
