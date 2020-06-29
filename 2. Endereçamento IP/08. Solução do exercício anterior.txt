@@ -1,0 +1,15 @@
+1. Dê a máscara de rede padrão.
+a) 255.255.0.0
+b) 255.255.255.0
+c) 255.0.0.0
+
+2. Converta: Máscara Padrão ↔ CIDR
+a) /13
+b) /21
+c) Não é CIDR/máscara de rede.
+d) /30
+
+3. Converta: CIDR ↔ Máscara Padrão
+a) 255.255.255.248
+b) 255.128.0.0
+c) 255.255.255.252

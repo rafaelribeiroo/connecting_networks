@@ -1,17 +1,11 @@
 1. Determine a identificação de rede dos IPs abaixo.
 a) Classe C.
-
 b) Classe A.
-
 c) Não possui rede/host e, além disso, o último octeto é inválido.
-
 d) Classe A.
 
 2. Determine a identificação de host dos IPs abaixo.
 a) Apenas último octeto define o host.
-
 b) Não é utilizado/não pode ser atribuído, pois inicia em 0.
-
 c) IP inválido, deve conter obrigatoriamente 4 octetos.
-
 d) Não possui rede/host.

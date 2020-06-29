@@ -1,0 +1,16 @@
+1. Dê a quantidade de hosts das máscaras abaixo.
+a) 255.255.255.0
+b) 255.252.248.0
+c) 255.255.0.0
+d) 255.255.255.248
+
+2. Dê a quantidade de sub-rede das máscaras abaixo.
+a) 248.0.0.0
+b) 255.255.255.240
+c) 255.255.255.252
+d) 255.255.192.0
+
+3. Sub-rede utilizando a classe de rede.
+a) 182.230.130.115 ↔ 255.255.255.192
+b)   11.130.11.130 ↔ 225.255.248.0
+c)   189.219.11.12 ↔ 255.255.255.252

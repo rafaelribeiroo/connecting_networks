@@ -17,12 +17,16 @@ E   ↔   240 a 255
     ← Exemplo classe C: 192.10.1.1
 
 •• Os endereços de rede dos IPs são definidos de acordo com as classes.
-    ← Exemplo classe A: <Rede>.<Host>.<Host>.<Host>
-    ← Exemplo classe B: <Rede>.<Rede>.<Host>.<Host>
-    ← Exemplo classe C: <Rede>.<Rede>.<Rede>.<Host>
-    Os hosts são dispositivos.
+    ← Classe A: Apenas o 1º octeto identifica a rede;
+    ← Classe B: 1º e 2º;
+    ← Classe C: 1º, 2º e 3º.
 
-••• O que são aqueles números gigantescos ali dentre os sinais de igual? Vamos
+••• Ao converter as classes para máscaras, elas devem seguir o modelo abaixo.
+    ← Classe A: 255.0.0.0
+    ← Classe B: 255.255.0.0
+    ← Classe C: 255.255.255.0
+
+•••• O que são aqueles números gigantescos ali dentre os sinais de igual? Vamos
 lá, quando é classe A, como apenas o primeiro octeto é definido como endereço
 de rede, se multiplicarmos os 3 octetos de endereços de hosts (256 cada um),
 resultará em 16.777.216 possibilidades e, assim sucessivamente.
@@ -89,6 +93,70 @@ Com isso viram que o CIDR era a solução mais efetiva.
 ========================================================================
 
 Após a implementação do CIDR, o termo Classless ficou bastante conhecido
-    ← Classful (pré-CIDR): Classes A/B/C cheias.
+    ← Classful (pré-cidr): Classes A/B/C cheias.
     ← Classless: Não possui classes obrigatoriamente, vai depender da máscara
 podendo fazer o que quisermos de acordo com nossa necessidade.
+
+Os correspondentes CIDR das máscaras padrão são:
+    ← Classe A: 255.0.0.0     /8
+    ← Classe B: 255.255.0.0   /16
+    ← Classe C: 255.255.255.0 /24
+
+"De onde surgiram esses números após a barra?"
+    Bem simples, quando convertemos eles de decimal para binário, temos quantos
+uns? Vamos analisar.
+
+=========================================
+128 // 64 // 32 // 16 // 8 // 4 // 2 // 1 (= 255)
+ 1   →   →   →                            (= 8 bits)
+=========================================
+
+• Utilizando CIDR nossa máscara altera um pouco, deixando de valer apenas 255 e
+0 e, apresentando valores distintos.
+
+Exemplo:
+
+====================================================================
+                          255.255.255.192
+
+Como visto na última tabela, todos os números somados resultam em
+255, então sabemos que os 3 primeiros octetos resultarão em 24.
+No último, basta utilizar como base a tabela acima para ir
+subtraindo o octeto pelos valores chumbados, importante
+seguir a ordem indicada.
+
+Para descobrirmos o CIDR então, basta somar a quantidade de bits 1,
+resultando em 26.
+
+NOTA: Nunca devemos intercalar os bits 1 com 0, então se estiver
+calculando e o próximo valor da direita pra esquerda der uma
+soma maior que o CIDR, não é válido!
+====================================================================
+
+"E como fazemos para converter de CIDR para máscara padrão?"
+
+=======================================================
+                          /8
+
+De cara da pra saber que a máscara padrão desse CIDR é
+255.0.0.0, pois os bits 1 são sequenciais da esquerda
+pra direita – não intercalando em nenhum momento.
+
+                          /16
+
+IIIIIIII.IIIIIIII.00000000.00000000
+   8    +   8   = 16, então completamos o resto com 0
+   → Ficando 255.255.0.0
+
+                          /28
+
+IIIIIIII.IIIIIIII.IIIIIIII.IIII0000
+   8    +   8    +   8    +   4 = 28, completa com 0
+   → "Como sabemos qual o valor tendo apenas 4 bits I?"
+        Basta somarmos os 4 últimos valores da tabela
+mostrada na linha 111. 240!
+   → A máscara será 255.255.255.240.
+=======================================================
+
+Para realizar alguns exercícios se ficou bem claro, cheque o arquivo: "7.
+Exercício...".

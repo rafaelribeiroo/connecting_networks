@@ -1,0 +1,88 @@
+como eu sei que classe a/b/c cabe aquele monte de dispositivos alem daquela conta
+256 x 256 x 256?
+
+a:  255.0.0.0     >> 256x256x256
+b:  255.255.0.0   >> 256x256
+c:  255.255.255.0 >> 256
+
+mas como  o pc entende? ele entende fazendo isso aqui
+toda vez que falamos de host o pc usa uma formulazinha assim
+
+host => 2 elevado a n - 2 => 2²⁴ => por isso vemos em alguns sites: 16.777.214 total de IPs endereçaveis classe A
+                                                       e em outros: 16.777.216
+
+o -2 é o seguinte, os unicos endereços sao os endereços que estao na parte de host
+eu nunca posso usar no computador o nome da rede e o endereço de broadcast
+
+
+mesma coisa classe B
+não é 255.255.0.0?
+    quantos 0 temos convertendo pra binario?
+    00000000.00000000
+    16
+    por isso 2 elevado ao 16
+
+255.255.255.252
+111...1111  00
+Apenas 2 zeros, então 2n - 2 será 2 elevado a 2 -2 = 2
+
+Mas 2 hosts endereçaveis é muito pouco?
+Não se voce utilizar para fazer inteligação entre 2 equipamentos unicos, conectar 2 roteadores
+
+
+vamos pra 2 formas diferentes e mais faceis
+==Só funciona em endereços de classe C==
+
+255.255.255.248
+
+1  //  2  //  4  //  8  //  16  //  32  //  64  //  128
+0      0       0     1       1       1        1         1
+
+O ultimo bit 1 foi no 8 correto? Então o resultado é 8, de 2 elevado a 3 (zeros)
+então fazemos 8 - 2
+
+a outra forma---
+255.255.255.224 = sem usar binario
+
+256-<ultimo_octeto>=32 - 2=30
+
+
+outra forma--- com as outras classes
+255.255.248.0
+    Pega o octeto misto
+    256-248=8 x 256=2048 - 2=246
+
+
+=============================
+
+CALCULANDO A QUANTIDADE DE SUB-REDES
+
+a:  255.0.0.0
+b:  255.255.0.0     REDES CLASSFULL
+c:  255.255.255.0
+    Só teremos sub-rede se tivermos octeto misto/distoante (mistura de 0 e 1)
+
+255.192.0.0
+    Converte o 192 pra binario
+    1100 0000
+    quantos uns tem? 2, entao é elevado a 2
+    2 elevado a 2 = 4 sub-redes
+
+
+VAMOS COMPLICAR UM POUCO AGORA
+na prova da Marinha em 2018 eles pediram.
+    << Eu quero que seja uma rede de IP classe B (IP 127.200.1.100)
+    << ele queria uma sub-rede que fosse classe B, ele queria saber quantas
+    sub-redes existiriam nessa mascara de rede.
+        >> 255.255.255.192
+
+    Apenas os 2 primeiros octetos são rede na classe B, como ele exigiu que fosse classe B
+    Temos que englobar o penultimo 255 também então
+    255 em binario fica 8 um e 192 2 unzinhos
+    2 elevado a n vai ser 2 elevado a 10 entao = 2048
+
+
+
+ENTAO PARA CALCULAR A QUANTIDADE DE HOSTS: PEGA A QUANTIDADE DE 0
+                                SUB-REDES: PEGA A QUANTIDADE DE 1
+Nao tem? então nao existe obrigatoriamente

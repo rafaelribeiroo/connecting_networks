@@ -66,23 +66,3 @@ porém de rede (DDD) diferente.
 
 Vamos determinar agora o que é rede e o que é host (verifique arquivo: "4.
 Endereçamento...).
-
-
-
-
-
-
-
-
-
-
-Portas lógicas
-
-    NOT     NAND     NOR     OR     AND
-                                    Os equipamentos usam essa porta para fazer
-                                    cálculo de máscara dispensando informações
-                                    adicionais
-
-
-Por isso a rede na sua casa começa com 192 (pertencente à classe C), é a classe
-que mais se aproxima da sua necessidade.
