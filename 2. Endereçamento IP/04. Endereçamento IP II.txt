@@ -1,7 +1,8 @@
 Priori: Nunca diga que sabe de tudo! Porque quando você pronuncia isso, se
 convence que sabe tanto que não precisa mais estudar.
 
-Vamos fazer uma colinha, pois isso é de extrema importância.
+Vamos fazer uma colinha da faixa de IP e suas respectivas classes, pois isso é
+de extrema importância para esse arquivo.
 
 =======================================
 A   ↔     0 a 127   ↔   2²⁴: 16.777.216
