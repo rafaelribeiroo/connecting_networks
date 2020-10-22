@@ -1,0 +1,97 @@
+Vamos fazer uma colinha da faixa de IP e suas respectivas classes, pois isso é
+de extrema importância para esse arquivo.
+
+=======================================
+A   ↔     0 a 127   ↔   2²⁴: 16.777.216
+B   ↔   128 a 191   ↔   2¹⁶: 65.536
+C   ↔   192 a 223   ↔    2⁸: 256
+D   ↔   224 a 239
+E   ↔   240 a 255
+=======================================
+
+• Nós entendemos que as possibilidades descritas acima são resultado de uma
+conta matemática simples: 256*256*256.
+
+•• Já nosso computador não pensa dessa forma, para ele descobrir o total de IPs
+endereçáveis, ele faz uma fórmula mais ou menos assim: (2²⁴ - 2) = 16.777.214
+    ← A subtração sempre será por 2, já que todas as classes reservam dois
+endereços: o de broadcast e o que aponta ao gateway.
+
+••• O número 2 elevado às potências informadas acima representam o total de
+bit 0 na máscara de rede.
+    Ex. Classe B: 255.255.0.0
+        ← "Quantos 0 temos convertendo pra binário?"
+        11111111.11111111.00000000.00000000 = 16 bits 0
+        ← Logo, 2¹⁶ = 65.536 (-2 = 65.534).
+
+==========================================
+FORMA MAIS FÁCIL DE CALCULAR QNTDE DE BITS
+
+OBS: Essa forma só funciona em endereços
+de classe C.
+
+         >> 255.255.255.248 <<
+128 // 64 // 32 // 16 // 8 // 4 // 2 // 1
+  1     1     1     1    1    0    0    0
+
+Como o último bit 1 foi no valor 8, nós
+sabemos que o resultado será 8.
+    ← Pois 2³ = 8 (-2 = 6).
+_________________________________________
+              OUTRA FORMA
+
+OBS: Funciona com todas as classes.
+
+         >> 255.255.248.0 <<
+
+Identifique o octeto misto e subtraia por
+256.
+
+256 - 248 = 8 x 256 = 2048 (-2 = 246)
+==========================================
+
+•••• "E quando temos redes classless?"
+    ← Mesma lógica. Ex: 255.255.255.252
+    11111111.11111111.11111111.11111100 = 2 bits 0
+    ← Logo 2² (-2 = 2).
+
+"Apenas 2 hosts endereçáveis? Mas isso é absurdamente pouco."
+Não se você utilizar para fazer inteligação entre dois equipamentos únicos.
+Ex: Conectar dois roteadores.
+
+Até aqui aprendemos a calcular a quantidade de hosts endereçáveis em cada
+máscara, agora aprenderemos a calcular a quantidade de sub-redes.
+
+• Importante observar que só teremos sub-redes se houver um octeto misto e/ou
+distoante (nada mais que mistura de bits 0 com bits 1), não existindo em
+redes classful (255.0.0.0, 255.255.0.0 e 255.255.255.0).
+
+==========================================
+Convertendo o octeto distoante (192) para
+binário, teremos:
+
+            >> 255.192.0.0 <<
+128 // 64 // 32 // 16 // 8 // 4 // 2 // 1
+ 1     1      0     0    0    0    0    0
+
+Temos dois bits uns no exemplo acima.
+    ← Logo 2² = 4 (sub-redes).
+==========================================
+
+Para complicar um pouco a mais, na prova da Marinha no ano de 2018 eles
+apresentaram o enunciado a seguir.
+    ← Calcule quantas sub-redes existem...
+    ← Exijo que seja uma rede de IP classe B: 127.200.1.100;
+    ← Com a máscara de rede: 255.255.255.192.
+
+• Nesse caso, não convertemos apenas o octeto distoante, já que as redes de IP
+classe B determina que apenas os dois primeiros octetos são máscaras de
+rede.
+    ← Como visto várias vezes, 255 são 8 bits uns
+    ← E, como visto no exemplo acima, um octeto 192 têm 2 bits uns
+    ← Logo 2¹⁰ = 2048 (sub-redes).
+
+NOTA: Para calcular a quantidade de HOSTS: PEGA A QUANTIDADE DE BIT 0
+                                    SUB-REDES: PEGA A QUANTIDADE DE BIT 1.
+    ← "Não tem?!"
+    Então não existe obrigatoriamente.

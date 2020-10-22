@@ -1,0 +1,39 @@
+1. Dê a quantidade de hosts das máscaras abaixo.
+a) 255.255.255.0
+        >> IIIIIIII.IIIIIIII.IIIIIIII.00000000 <<
+                   2⁸ = 256 (-2 = 254)
+b) Teve alternância entre bits 1 e 0, não é máscara de rede.
+c) 255.255.0.0
+        >> IIIIIIII.IIIIIIII.00000000.00000000 <<
+                   2¹⁶ = 65.536 (-2 = 65.534)
+d) 255.255.255.248
+        >> IIIIIIII.IIIIIIII.IIIIIIII.IIIII000 <<
+                   2³ = 8 (-2 = 6)
+
+2. Dê a quantidade de sub-rede das máscaras abaixo.
+a) 248.0.0.0
+        >> IIIII000.00000000.00000000.00000000 <<
+                   2⁵ = 32
+b) 255.255.255.240
+        >> IIIIIIII.IIIIIIII.IIIIIIII.IIII0000 <<
+                   2⁴ = 16
+c) 255.255.255.252
+        >> IIIIIIII.IIIIIIII.IIIIIIII.IIIIII00 <<
+                   2⁶ = 64
+d) 255.255.192.0
+        >> IIIIIIII.IIIIIIII.II000000.00000000 <<
+                   2² = 4
+
+3. Sub-rede utilizando a classe de rede.
+a) 182.230.130.115 ↔ 255.255.255.192
+        >> 255.255.0.0 <<
+IIIIIIII.IIIIIIII.IIIIIIII.II000000
+            2¹⁰ = 1.024
+b)   11.130.11.130 ↔ 225.255.248.0
+        >> 255.0.0.0 <<
+IIIIIIII.IIIIIIII.IIIII000.00000000
+            2¹³ = 8.192
+c)   189.219.11.12 ↔ 255.255.255.252
+        >> 255.255.0.0 <<
+IIIIIIII.IIIIIIII.IIIIIIII.IIIIII00
+            2¹⁴ = 16.384

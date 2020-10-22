@@ -32,7 +32,7 @@ lá, quando é classe A, como apenas o primeiro octeto é definido como endereç
 de rede, se multiplicarmos os 3 octetos de endereços de hosts (256 cada um),
 resultará em 16.777.216 possibilidades e, assim sucessivamente.
 
-Para realizar alguns exercícios se ficou bem claro, cheque o arquivo: "5.
+Para realizar alguns exercícios se ficou bem claro, cheque o arquivo: "01.
 Exercício...".
 
 Ao configurar uma rede, nós devemos como profissionais/curiosos informar qual a
@@ -94,7 +94,7 @@ Com isso viram que o CIDR era a solução mais efetiva.
 ========================================================================
 
 Após a implementação do CIDR, o termo Classless ficou bastante conhecido
-    ← Classful (pré-cidr): Classes A/B/C cheias.
+    ← Classful (pré-cidr): Classes cheias.
     ← Classless: Não possui classes obrigatoriamente, vai depender da máscara
 podendo fazer o que quisermos de acordo com nossa necessidade.
 
@@ -142,6 +142,7 @@ soma maior que o CIDR, não é válido!
 De cara da pra saber que a máscara padrão desse CIDR é
 255.0.0.0, pois os bits 1 são sequenciais da esquerda
 pra direita – não intercalando em nenhum momento.
+    ← Ao intercalar é endereço IP e não máscara de rede.
 
                           /16
 
@@ -159,5 +160,5 @@ mostrada na linha 111. 240!
    → A máscara será 255.255.255.240.
 =======================================================
 
-Para realizar alguns exercícios se ficou bem claro, cheque o arquivo: "7.
+Para realizar alguns exercícios se ficou bem claro, cheque o arquivo: "03.
 Exercício...".
