@@ -1,0 +1,107 @@
+Priori: Após aprendermos a calcular a quantidade de IPs endereçáveis e a
+quantidade de sub-redes, vamos agora checar os endereços de rede, host e
+broadcast.
+
+Vamos trabalhar em cima do IP e máscara abaixo.
+
+               192.168.10.1
+              255.255.255.192
+
+Faremos agora o cálculo de sub-rede para identificar quantas possibilidades
+existem de endereço de rede, hosts endereçáveis e broadcast.
+
+• Primeiro, identificamos o salto (quantidade de IPs que cada sub-rede terá).
+    ← Para obter o salto, sempre definimos o limite de combinações subtraindo
+pelo octeto distoante.
+    ← 256 - 192 = 64
+    ← Logo, o salto será 64.
+
+•• Faremos agora a tabelinha para facilitar a visualização.
+
+===============================================================================
+• Começaremos pela sub-rede, sempre começando do zero, de acordo com a classe.
+Por ser classe C, o último octeto é livre. Pule de acordo com o salto.
+
+•• Vamos agora ao broadcast, sempre vai ser a próxima sub-rede -1.
+
+••• Vamos determinar os hosts endereçáveis agora, um após a sub-rede até um
+anterior ao broadcast e, assim sucessivamente.
+
+    REDE                            HOST                        BROADCAST     |
+192.168.10.0             192.168.10.1 à 192.168.10.62         192.168.10.63   |LAB
+192.168.10.64           192.168.10.65 à 192.168.10.126        192.168.10.127  |GUEST
+192.168.10.128         192.168.10.129 à 192.168.10.190        192.168.10.191  |VISITORS
+192.168.10.192         192.168.10.193 à 192.168.10.254        192.168.10.255  |FREE
+192.168.10.256 *
+
+* Inválido, feito apenas para demonstração (não existe 257 combinações).
+
+OBS: Se o octeto misto é 192, a última sub-rede sempre vai ser 192. O endereço
+de octeto misto de qualquer máscara de rede sempre vai ser a última sub-rede
+possível sem exceção.
+===============================================================================
+
+"E quando o salto for baixo, vai dar muito trabalho?"
+    ← Não necessariamente, bora lá...
+
+                            192.168.10.111
+                           255.255.255.240
+
+                            256 - 240 = 16
+===================================================================
+    REDE                        HOST                    BROADCAST
+192.168.10.0        192.168.10.1 à 192.168.10.14     192.168.10.15
+.
+.
+.
+
+OBS: Nas questões de concurso e solicitado em provas, a ideia é chegar na
+variação do octeto (111, já que é classe B) pelo cálculo da sub-rede.
+    ← Pegamos então o 111 e vamos multiplicamos por números sequenciais até
+ficar próximo do nosso valor.
+    ← 16 * 5 = 80
+    ← 16 * 6 = 96 ** Esse foi o que mais aproximou, então...
+    ← 16 * 7 = 112
+
+192.168.10.96      192.168.10.97 à 192.168.10.110    192.168.10.111
+192.168.10.112
+===================================================================
+
+"Ok, mas todos os exemplos fornecidos foram para classe C, e pra B?"
+
+                            189.216.100.1
+                            255.255.128.0
+
+                           256 - 128 = 128
+===================================================================
+• Como a variação da máscara ocorre no 3• octeto, vamos trabalhar
+em cima dele.
+
+•• Na rede, completamos os octetos restantes (sem ser o distoante) com zero
+(mínimo).
+
+••• No broadcast, completamos com o máximo: 255.
+
+•••• No host mantém normal.
+
+     REDE                         HOST                    BROADCAST
+  189.216.0.0          189.216.0.1 à 189.216.127.254   189.216.127.255
+189.216.128.0        189.216.129.1 à 189.216.255.254   189.216.255.255
+189.216.256.0 *
+
+* Inválido, feito apenas para demonstração (não existe 257 combinações).
+===================================================================
+
+Visto todas as tabelas acima, aprenderemos agora um macete para realizar esses
+cálculos de forma mais fácil.
+
+                192.168.10.111
+               255.255.255.192
+
+===================================================================
+• Converta a variação da máscara (192) pra binário:
+    ← 11000000
+
+•• Converta a variação do endereço IP (111):
+    ← 01101111
+===================================================================

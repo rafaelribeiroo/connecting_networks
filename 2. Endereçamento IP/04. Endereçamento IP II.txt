@@ -14,13 +14,13 @@ E   ↔   240 a 255
 
 • As classes dos IPs são definidas pelo primeiro octeto.
     ← Exemplo classe A: 10.0.1.100
-    ← Exemplo classe B: 190.2.2.20
-    ← Exemplo classe C: 192.10.1.1
+    ← B: 190.2.2.20
+    ← C: 192.10.1.1
 
 •• Os endereços de rede dos IPs são definidos de acordo com as classes.
     ← Classe A: Apenas o 1º octeto identifica a rede;
-    ← Classe B: 1º e 2º;
-    ← Classe C: 1º, 2º e 3º.
+    ← B: 1º e 2º;
+    ← C: 1º, 2º e 3º.
 
 ••• Ao converter as classes para máscaras, elas devem seguir o modelo abaixo.
     ← Classe A: 255.0.0.0

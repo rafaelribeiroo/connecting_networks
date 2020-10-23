@@ -79,3 +79,7 @@ O privado é pra rede interna, enquanto o público é para navegação.
 
 <DISPOSITIVO>?
 Um dispositivo é algo que podemos endereçar na rede.
+
+<WORM>?
+Vírus de computador que infecta todas as máquinas da mesma rede sem interação
+do usuário. Se tiver tudo em uma rede só, infecta todos.

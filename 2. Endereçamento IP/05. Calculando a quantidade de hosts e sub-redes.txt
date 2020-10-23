@@ -61,10 +61,16 @@ Ex: Conectar dois roteadores.
 
 Até aqui aprendemos a calcular a quantidade de hosts endereçáveis em cada
 máscara, agora aprenderemos a calcular a quantidade de sub-redes.
+    ← Qual a importância das sub-redes?
+    ← Sem a subdivisão de rede, ocasionaria diversos transtornos, imaginaremos
+que a operadora OI crie sua rede cheia (classful) abandonando a subdivisão,
+todos os clientes que possuísem contrato, seria "permitido" enxergar todos
+os outros que assinaram – assim como o nome do PC, IP e tudo que a pessoa
+divulgasse na rede.
+    ← Checar também a explicação de Worm em: "Q&A.txt"
 
-• Importante observar que só teremos sub-redes se houver um octeto misto e/ou
-distoante (nada mais que mistura de bits 0 com bits 1), não existindo em
-redes classful (255.0.0.0, 255.255.0.0 e 255.255.255.0).
+• Importante observar que só teremos sub-redes se haver um octeto
+misto/distoante (basicamente mistura de zeros e uns), já a classful não possui.
 
 ==========================================
 Convertendo o octeto distoante (192) para
@@ -91,7 +97,7 @@ rede.
     ← E, como visto no exemplo acima, um octeto 192 têm 2 bits uns
     ← Logo 2¹⁰ = 2048 (sub-redes).
 
-NOTA: Para calcular a quantidade de HOSTS: PEGA A QUANTIDADE DE BIT 0
-                                    SUB-REDES: PEGA A QUANTIDADE DE BIT 1.
+NOTA: Para calcular a quantidade de HOSTS: PEGA A QUANTIDADE DE BITs 0
+                                    SUB-REDES: PEGA A QUANTIDADE DE BITs 1.
     ← "Não tem?!"
     Então não existe obrigatoriamente.
