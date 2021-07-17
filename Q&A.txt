@@ -83,3 +83,9 @@ Um dispositivo é algo que podemos endereçar na rede.
 <WORM>?
 Vírus de computador que infecta todas as máquinas da mesma rede sem interação
 do usuário. Se tiver tudo em uma rede só, infecta todos.
+
+Os funcionários da provedora de internet pode vigiar o que faço?
+Se estiver sem HTTPs, sim.
+
+i3 10ª geração é mais rápido que um i5 9ª?
+Sim, o nome disso é obsolescência planejada.
