@@ -1,0 +1,17 @@
+Existem apenas 2 (dois) tipos de equipamentos de rede.
+
+• Passivos → Todo equipamento que não tem circuito eletrônico e não precisa
+ser ligado na tomada para funcionar;
+    ← Tomada de superfície: evita danos nos cabos, facilita a manutenção.
+    ← Device cord: cabo que liga o dispositivo à rede.
+    ← Patch panel: organiza os cabos, contém a numeração de cada porta.
+
+
+• Ativos → Obrigatoriamente tem circuito, memória, processador e precisa
+ser ligado na tomada.
+    ← Hub (concentrador): Inteligar os computadores; se tenho 10 dispositivos
+e preciso interligar, uso o hub;
+    ← Switch (comutador): Compartilhamento entre as coisas, os mesmos meios
+de transmissão.
+    ← Bridge (ponte): Se temos duas LAN's com seus próprios hubes, utilizo a
+bridge para as LAN's se comunicarem.

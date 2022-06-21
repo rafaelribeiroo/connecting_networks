@@ -104,4 +104,15 @@ cálculos de forma mais fácil.
 
 •• Converta a variação do endereço IP (111):
     ← 01101111
-===================================================================
+
+••• Separando os bits uns dos zeros, ficará dessa forma:
+    ← 11|000000
+    ← 01|101111
+
+    Para definir a sub-rede, mantenho os bits à esquerda e insere 0
+    ← 01|000000: 64 → 192.168.10.64
+    Caso fosse classe B, completamos com 0
+
+    Para definir o broadcast, mesma coisa, completando com 1
+    ← 01|111111: 127 → 192.168.10.127
+    Caso fosse classe B, completamos com 255
