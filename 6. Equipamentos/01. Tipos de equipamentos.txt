@@ -15,3 +15,5 @@ e preciso interligar, uso o hub;
 de transmissão.
     ← Bridge (ponte): Se temos duas LAN's com seus próprios hubes, utilizo a
 bridge para as LAN's se comunicarem.
+    ← Modem: Equipamento capaz de modular e demodular o sinal. Ou seja, pega
+o sinal analógico (senóide) e transforma em sinal digital.
